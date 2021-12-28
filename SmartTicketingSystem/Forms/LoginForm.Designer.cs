@@ -31,6 +31,7 @@ namespace SmartTicketingSystem
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.shutDownButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -41,7 +42,6 @@ namespace SmartTicketingSystem
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.shutDownButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -58,6 +58,24 @@ namespace SmartTicketingSystem
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1200, 56);
             this.panel1.TabIndex = 0;
+            // 
+            // shutDownButton
+            // 
+            this.shutDownButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.shutDownButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.shutDownButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("shutDownButton.BackgroundImage")));
+            this.shutDownButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.shutDownButton.FlatAppearance.BorderSize = 0;
+            this.shutDownButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.shutDownButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.shutDownButton.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.shutDownButton.ForeColor = System.Drawing.Color.White;
+            this.shutDownButton.Location = new System.Drawing.Point(1149, 0);
+            this.shutDownButton.Name = "shutDownButton";
+            this.shutDownButton.Size = new System.Drawing.Size(51, 56);
+            this.shutDownButton.TabIndex = 10;
+            this.shutDownButton.UseVisualStyleBackColor = false;
+            this.shutDownButton.Click += new System.EventHandler(this.shutDownButton_Click);
             // 
             // pictureBox1
             // 
@@ -77,9 +95,9 @@ namespace SmartTicketingSystem
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(60, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(426, 34);
+            this.label1.Size = new System.Drawing.Size(384, 34);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Kathmandu Recreation Center";
+            this.label1.Text = "National Recreation Center";
             // 
             // pictureBox2
             // 
@@ -160,6 +178,7 @@ namespace SmartTicketingSystem
             this.button1.TabIndex = 8;
             this.button1.Text = "Login";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label5
             // 
@@ -172,24 +191,6 @@ namespace SmartTicketingSystem
             this.label5.Size = new System.Drawing.Size(178, 23);
             this.label5.TabIndex = 9;
             this.label5.Text = "Forgot Password?";
-            // 
-            // shutDownButton
-            // 
-            this.shutDownButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.shutDownButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.shutDownButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("shutDownButton.BackgroundImage")));
-            this.shutDownButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.shutDownButton.FlatAppearance.BorderSize = 0;
-            this.shutDownButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.shutDownButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.shutDownButton.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.shutDownButton.ForeColor = System.Drawing.Color.White;
-            this.shutDownButton.Location = new System.Drawing.Point(1149, 0);
-            this.shutDownButton.Name = "shutDownButton";
-            this.shutDownButton.Size = new System.Drawing.Size(51, 56);
-            this.shutDownButton.TabIndex = 10;
-            this.shutDownButton.UseVisualStyleBackColor = false;
-            this.shutDownButton.Click += new System.EventHandler(this.shutDownButton_Click);
             // 
             // Form1
             // 

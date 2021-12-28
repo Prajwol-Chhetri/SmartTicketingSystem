@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SmartTicketingSystem.Forms;
 
 namespace SmartTicketingSystem
 {
@@ -20,6 +21,14 @@ namespace SmartTicketingSystem
         private void shutDownButton_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            using (AdminDashboardForm fd = new AdminDashboardForm())
+            {
+                fd.ShowDialog();
+            }
         }
     }
 }
