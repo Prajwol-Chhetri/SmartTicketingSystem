@@ -38,20 +38,21 @@ namespace SmartTicketingSystem.Forms
             this.panelSide = new System.Windows.Forms.Panel();
             this.btnAdminDashboard = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.shutDownButton = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelTime = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.shutDownButton = new System.Windows.Forms.Button();
-            this.labelTime = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timerTime = new System.Windows.Forms.Timer(this.components);
-            this.label2 = new System.Windows.Forms.Label();
+            this.panelControls = new System.Windows.Forms.Panel();
             this.panelLeft.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -162,6 +163,22 @@ namespace SmartTicketingSystem.Forms
             this.panel2.Size = new System.Drawing.Size(216, 140);
             this.panel2.TabIndex = 1;
             // 
+            // button5
+            // 
+            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.Location = new System.Drawing.Point(174, 0);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(42, 45);
+            this.button5.TabIndex = 8;
+            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
@@ -194,6 +211,35 @@ namespace SmartTicketingSystem.Forms
             this.panel3.Size = new System.Drawing.Size(984, 56);
             this.panel3.TabIndex = 2;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.label2.Location = new System.Drawing.Point(6, 17);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(441, 23);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "National Recreation Center, Kathmandu Nepal";
+            // 
+            // shutDownButton
+            // 
+            this.shutDownButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.shutDownButton.BackColor = System.Drawing.Color.White;
+            this.shutDownButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("shutDownButton.BackgroundImage")));
+            this.shutDownButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.shutDownButton.FlatAppearance.BorderSize = 0;
+            this.shutDownButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.shutDownButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.shutDownButton.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.shutDownButton.ForeColor = System.Drawing.Color.White;
+            this.shutDownButton.Location = new System.Drawing.Point(932, 0);
+            this.shutDownButton.Name = "shutDownButton";
+            this.shutDownButton.Size = new System.Drawing.Size(52, 53);
+            this.shutDownButton.TabIndex = 11;
+            this.shutDownButton.UseVisualStyleBackColor = false;
+            this.shutDownButton.Click += new System.EventHandler(this.shutDownButton_Click);
+            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
@@ -208,43 +254,17 @@ namespace SmartTicketingSystem.Forms
             this.panel4.Size = new System.Drawing.Size(984, 84);
             this.panel4.TabIndex = 3;
             // 
-            // button5
+            // labelTime
             // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(174, 0);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(42, 45);
-            this.button5.TabIndex = 8;
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(83, 22);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 23);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Welcome:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(192, 22);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(148, 23);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "Prajwol Chhetri";
+            this.labelTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelTime.AutoSize = true;
+            this.labelTime.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTime.ForeColor = System.Drawing.Color.White;
+            this.labelTime.Location = new System.Drawing.Point(874, 33);
+            this.labelTime.Name = "labelTime";
+            this.labelTime.Size = new System.Drawing.Size(110, 23);
+            this.labelTime.TabIndex = 17;
+            this.labelTime.Text = "HH: MM: SS";
             // 
             // label5
             // 
@@ -268,35 +288,27 @@ namespace SmartTicketingSystem.Forms
             this.label6.TabIndex = 15;
             this.label6.Text = "Role:";
             // 
-            // shutDownButton
+            // label4
             // 
-            this.shutDownButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.shutDownButton.BackColor = System.Drawing.Color.White;
-            this.shutDownButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("shutDownButton.BackgroundImage")));
-            this.shutDownButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.shutDownButton.FlatAppearance.BorderSize = 0;
-            this.shutDownButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.shutDownButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.shutDownButton.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.shutDownButton.ForeColor = System.Drawing.Color.White;
-            this.shutDownButton.Location = new System.Drawing.Point(932, 0);
-            this.shutDownButton.Name = "shutDownButton";
-            this.shutDownButton.Size = new System.Drawing.Size(52, 53);
-            this.shutDownButton.TabIndex = 11;
-            this.shutDownButton.UseVisualStyleBackColor = false;
-            this.shutDownButton.Click += new System.EventHandler(this.shutDownButton_Click);
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(192, 22);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(148, 23);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Prajwol Chhetri";
             // 
-            // labelTime
+            // label3
             // 
-            this.labelTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelTime.AutoSize = true;
-            this.labelTime.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTime.ForeColor = System.Drawing.Color.White;
-            this.labelTime.Location = new System.Drawing.Point(874, 33);
-            this.labelTime.Name = "labelTime";
-            this.labelTime.Size = new System.Drawing.Size(110, 23);
-            this.labelTime.TabIndex = 17;
-            this.labelTime.Text = "HH: MM: SS";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(83, 22);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(103, 23);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Welcome:";
             // 
             // timer1
             // 
@@ -306,22 +318,20 @@ namespace SmartTicketingSystem.Forms
             // 
             this.timerTime.Tick += new System.EventHandler(this.timerTime_Tick);
             // 
-            // label2
+            // panelControls
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label2.Location = new System.Drawing.Point(6, 17);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(441, 23);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "National Recreation Center, Kathmandu Nepal";
+            this.panelControls.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControls.Location = new System.Drawing.Point(216, 140);
+            this.panelControls.Name = "panelControls";
+            this.panelControls.Size = new System.Drawing.Size(984, 580);
+            this.panelControls.TabIndex = 4;
             // 
             // AdminDashboardForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1200, 720);
+            this.Controls.Add(this.panelControls);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panelLeft);
@@ -365,5 +375,6 @@ namespace SmartTicketingSystem.Forms
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timerTime;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panelControls;
     }
 }

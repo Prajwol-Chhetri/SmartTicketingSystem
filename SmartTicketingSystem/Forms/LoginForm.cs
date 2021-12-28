@@ -32,6 +32,7 @@ namespace SmartTicketingSystem
             }
             */
 
+
             using (StaffDashboardForm fd = new StaffDashboardForm())
             {
                 fd.ShowDialog();

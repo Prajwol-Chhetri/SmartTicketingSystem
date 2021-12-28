@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SmartTicketingSystem.UserControls;
 
 namespace SmartTicketingSystem.Forms
 {
@@ -21,6 +22,8 @@ namespace SmartTicketingSystem.Forms
             timerTime.Start();
             PanelWidth = panelLeft.Width;
             isCollapsed = false;
+            DashboardUC dbuc = new DashboardUC();
+            AddControlsToPanel(dbuc);
         }
 
         private void shutDownButton_Click(object sender, EventArgs e)
@@ -67,9 +70,18 @@ namespace SmartTicketingSystem.Forms
 
         }
 
+        private void AddControlsToPanel(Control c)
+        {
+            c.Dock = DockStyle.Fill;
+            panelControls.Controls.Clear();
+            panelControls.Controls.Add(c);
+        }
+
         private void btnAdminDashboard_Click(object sender, EventArgs e)
         {
             moveSidePanel(btnAdminDashboard);
+            DashboardUC dbuc = new DashboardUC();
+            AddControlsToPanel(dbuc);
         }
 
         private void btnAdminTickets_Click(object sender, EventArgs e)
