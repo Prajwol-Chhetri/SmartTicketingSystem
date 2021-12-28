@@ -25,7 +25,14 @@ namespace SmartTicketingSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
+            /*
             using (AdminDashboardForm fd = new AdminDashboardForm())
+            {
+                fd.ShowDialog();
+            }
+            */
+
+            using (StaffDashboardForm fd = new StaffDashboardForm())
             {
                 fd.ShowDialog();
             }
