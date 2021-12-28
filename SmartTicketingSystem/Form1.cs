@@ -16,5 +16,10 @@ namespace SmartTicketingSystem
         {
             InitializeComponent();
         }
+
+        private void shutDownButton_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }
