@@ -164,7 +164,7 @@
         G0NeSv/S/Xo4DSDCBgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="button5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnMenu.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAF1JREFUWEft
         1MEJACEMRNE0pGIP28L234gQRwjsiuec/A/mYg5zkTEAf+7elTc5Pep2OlRlKNlWR43ajx5bHLOtjha1
@@ -466,7 +466,7 @@
         Y+oAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="shutDownButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnShutDown.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAANNJREFUWEft
         llkKAjEQRHMU76QH0E89gR7EH8GjulQJBY1ISDqdxI88KGaBqapZMnRaLP6VDXSHdp+jNuhBL3oWc4Ne

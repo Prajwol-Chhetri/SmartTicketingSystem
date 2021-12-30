@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\AdminRegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminRegisterForm.Designer.cs">
+      <DependentUpon>AdminRegisterForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\StaffDashboardForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,15 @@
     <Compile Include="UserControls\DashboardUC.Designer.cs">
       <DependentUpon>DashboardUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\RegistrationUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\RegistrationUC.Designer.cs">
+      <DependentUpon>RegistrationUC.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\AdminRegisterForm.resx">
+      <DependentUpon>AdminRegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\StaffDashboardForm.resx">
       <DependentUpon>StaffDashboardForm.cs</DependentUpon>
     </EmbeddedResource>

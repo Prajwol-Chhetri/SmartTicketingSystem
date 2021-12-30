@@ -37,12 +37,12 @@ namespace SmartTicketingSystem.Forms
             this.panelSide = new System.Windows.Forms.Panel();
             this.btnStaffDashboard = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnMenu = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.shutDownButton = new System.Windows.Forms.Button();
+            this.btnShutDown = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.labelTime = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -135,7 +135,7 @@ namespace SmartTicketingSystem.Forms
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.panel2.Controls.Add(this.button5);
+            this.panel2.Controls.Add(this.btnMenu);
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -144,21 +144,21 @@ namespace SmartTicketingSystem.Forms
             this.panel2.Size = new System.Drawing.Size(216, 140);
             this.panel2.TabIndex = 1;
             // 
-            // button5
+            // btnMenu
             // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(174, 0);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(42, 45);
-            this.button5.TabIndex = 8;
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btnMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMenu.FlatAppearance.BorderSize = 0;
+            this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenu.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenu.ForeColor = System.Drawing.Color.White;
+            this.btnMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnMenu.Image")));
+            this.btnMenu.Location = new System.Drawing.Point(174, 0);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Size = new System.Drawing.Size(42, 45);
+            this.btnMenu.TabIndex = 8;
+            this.btnMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMenu.UseVisualStyleBackColor = true;
+            this.btnMenu.Click += new System.EventHandler(this.button5_Click);
             // 
             // pictureBox3
             // 
@@ -185,7 +185,7 @@ namespace SmartTicketingSystem.Forms
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.shutDownButton);
+            this.panel3.Controls.Add(this.btnShutDown);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(216, 0);
             this.panel3.Name = "panel3";
@@ -203,23 +203,23 @@ namespace SmartTicketingSystem.Forms
             this.label2.TabIndex = 18;
             this.label2.Text = "National Recreation Center, Kathmandu Nepal";
             // 
-            // shutDownButton
+            // btnShutDown
             // 
-            this.shutDownButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.shutDownButton.BackColor = System.Drawing.Color.White;
-            this.shutDownButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("shutDownButton.BackgroundImage")));
-            this.shutDownButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.shutDownButton.FlatAppearance.BorderSize = 0;
-            this.shutDownButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.shutDownButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.shutDownButton.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.shutDownButton.ForeColor = System.Drawing.Color.White;
-            this.shutDownButton.Location = new System.Drawing.Point(932, 0);
-            this.shutDownButton.Name = "shutDownButton";
-            this.shutDownButton.Size = new System.Drawing.Size(52, 53);
-            this.shutDownButton.TabIndex = 11;
-            this.shutDownButton.UseVisualStyleBackColor = false;
-            this.shutDownButton.Click += new System.EventHandler(this.shutDownButton_Click);
+            this.btnShutDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnShutDown.BackColor = System.Drawing.Color.White;
+            this.btnShutDown.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnShutDown.BackgroundImage")));
+            this.btnShutDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnShutDown.FlatAppearance.BorderSize = 0;
+            this.btnShutDown.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnShutDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShutDown.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShutDown.ForeColor = System.Drawing.Color.White;
+            this.btnShutDown.Location = new System.Drawing.Point(932, 0);
+            this.btnShutDown.Name = "btnShutDown";
+            this.btnShutDown.Size = new System.Drawing.Size(52, 53);
+            this.btnShutDown.TabIndex = 11;
+            this.btnShutDown.UseVisualStyleBackColor = false;
+            this.btnShutDown.Click += new System.EventHandler(this.shutDownButton_Click);
             // 
             // panel4
             // 
@@ -345,12 +345,12 @@ namespace SmartTicketingSystem.Forms
         private System.Windows.Forms.Button btnStaffReport;
         private System.Windows.Forms.Button btnStaffTickets;
         private System.Windows.Forms.Panel panelSide;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnMenu;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button shutDownButton;
+        private System.Windows.Forms.Button btnShutDown;
         private System.Windows.Forms.Label labelTime;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timerTime;

@@ -11,9 +11,9 @@ using SmartTicketingSystem.Forms;
 
 namespace SmartTicketingSystem
 {
-    public partial class Form1 : Form
+    public partial class LoginForm : Form
     {
-        public Form1()
+        public LoginForm()
         {
             InitializeComponent();
         }
@@ -34,6 +34,14 @@ namespace SmartTicketingSystem
 
 
             using (StaffDashboardForm fd = new StaffDashboardForm())
+            {
+                fd.ShowDialog();
+            }
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            using (AdminRegisterForm fd = new AdminRegisterForm())
             {
                 fd.ShowDialog();
             }
