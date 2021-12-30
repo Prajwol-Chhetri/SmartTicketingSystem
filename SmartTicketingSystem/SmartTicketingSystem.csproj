@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Users.cs" />
     <Compile Include="Forms\AdminRegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
