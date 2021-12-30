@@ -30,10 +30,8 @@ namespace SmartTicketingSystem.Forms
 
         private void label9_Click(object sender, EventArgs e)
         {
-            using (LoginForm fd = new LoginForm())
-            {
-                fd.ShowDialog();
-            }
+            var loginForm = new LoginForm();
+            loginForm.ShowDialog();
         }
 
         private void btnShutDown_Click(object sender, EventArgs e)
