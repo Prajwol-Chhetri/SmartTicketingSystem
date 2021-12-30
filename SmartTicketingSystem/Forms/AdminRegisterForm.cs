@@ -47,35 +47,49 @@ namespace SmartTicketingSystem.Forms
             string pattern = @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$";
             Regex rg = new Regex(pattern);
 
-            // creating object of User class
-            FileStream fileStream = new FileStream("D:/work/year 3/Coursework/Application Dev/SmartTicketingSystem/Users.xml", FileMode.Create, FileAccess.Write);
+            // path of users xml file
+            String path = "D:/work/year 3/Coursework/Application Dev/SmartTicketingSystem/Users.xml";
+
+            // if file exists loading users from xml file
+            if (File.Exists(path))
+            {
+                FileStream existingUsersFS = new FileStream(path, FileMode.Open, FileAccess.Read);
+                users = (List<Users>)xmlSerializer.Deserialize(existingUsersFS);
+                existingUsersFS.Close();
+            }
+
+            // overwriting existing xml file
+            FileStream fileStream = new FileStream(path, FileMode.Create, FileAccess.Write);
+
+            // creating new user object of User class
             Users user = new Users();
 
-            if (rg.IsMatch(txtAdminEmail.Text))
+
+            if (users.Any(admin => admin.Role == RoleType.Admin))
             {
-                // if email is valid
+                // displaying error message if admin user is already registered
+                MessageBox.Show("ONLY ONE ADMIN ALLOWED IN THE SYSTEM\nADMIN ALREADY REGISTERED");
+            }
+            else if (rg.IsMatch(txtAdminEmail.Text) == false)
+            {
+                // displaying error message if email is invalid
+                MessageBox.Show("INVALID EMAIL");
+            }
+            else
+            {
+                // Saving admin user if everything is valid
                 user.FirstName = txtAdminFirstName.Text;
                 user.LastName = txtAdminLastName.Text;
                 user.Email = txtAdminEmail.Text;
                 user.Role = RoleType.Admin;
                 user.Password = txtAdminPassword.Text;
-
-                // saving User
                 users.Add(user);
-
-                // serializing register Users object to XMl file
-                xmlSerializer.Serialize(fileStream, users);
-
-                fileStream.Close();
-
                 MessageBox.Show("REGISTERED ADMIN USER SUCCESSFULLY");
             }
-            else
-            {
-                MessageBox.Show("INVALID EMAIL");
-                fileStream.Close();
-            }
-
+            
+            // serializing register Users object to XMl file and closing it
+            xmlSerializer.Serialize(fileStream, users);
+            fileStream.Close();
         }
     }
 }
