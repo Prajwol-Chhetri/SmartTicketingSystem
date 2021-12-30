@@ -47,7 +47,7 @@ namespace SmartTicketingSystem.Forms
             this.labelTime = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timerTime = new System.Windows.Forms.Timer(this.components);
@@ -227,7 +227,7 @@ namespace SmartTicketingSystem.Forms
             this.panel4.Controls.Add(this.labelTime);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.label6);
-            this.panel4.Controls.Add(this.label4);
+            this.panel4.Controls.Add(this.lblName);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(216, 56);
@@ -269,16 +269,16 @@ namespace SmartTicketingSystem.Forms
             this.label6.TabIndex = 15;
             this.label6.Text = "Role:";
             // 
-            // label4
+            // lblName
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(192, 22);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(148, 23);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "Prajwol Chhetri";
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.Color.White;
+            this.lblName.Location = new System.Drawing.Point(192, 22);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(148, 23);
+            this.lblName.TabIndex = 14;
+            this.lblName.Text = "Prajwol Chhetri";
             // 
             // label3
             // 
@@ -348,7 +348,7 @@ namespace SmartTicketingSystem.Forms
         private System.Windows.Forms.Button btnMenu;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnShutDown;
         private System.Windows.Forms.Label labelTime;

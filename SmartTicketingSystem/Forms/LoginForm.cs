@@ -37,9 +37,6 @@ namespace SmartTicketingSystem
             // path to xml file for user authentication
             String path = "D:/work/year 3/Coursework/Application Dev/SmartTicketingSystem/Users.xml";
 
-            // creating objects of AdminDashboardForm and StaffDashboard form to display when authorized
-            var adminDashboard = new AdminDashboardForm();
-            var staffDashboard = new StaffDashboardForm();
 
             // checking if xml file exists for authentication
             if (File.Exists(path))
@@ -59,15 +56,23 @@ namespace SmartTicketingSystem
                         // displaying dashboard based on role if user is authorized
                         if (user.Role == RoleType.Admin)
                         {
+                            // closing xml file and setting authenticated as true
                             fileStream.Close();
                             authenticated = true;
+
+                            // displaying admin dashboard and exiting loop
+                            var adminDashboard = new AdminDashboardForm(user.FirstName + " " + user.LastName);
                             adminDashboard.ShowDialog();
                             break;
                         }
                         else
                         {
+                            // closing xml file and setting authenticated as true
                             fileStream.Close();
                             authenticated = true;
+
+                            // displaying staff dashboard and exiting loop
+                            var staffDashboard = new StaffDashboardForm(user.FirstName + " " + user.LastName);
                             staffDashboard.ShowDialog();
                             break;
                         }

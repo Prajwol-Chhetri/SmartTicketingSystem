@@ -16,7 +16,7 @@ namespace SmartTicketingSystem.Forms
         int PanelWidth;
         bool isCollapsed;
 
-        public AdminDashboardForm()
+        public AdminDashboardForm(string value)
         {
             InitializeComponent();
             timerTime.Start();
@@ -24,6 +24,7 @@ namespace SmartTicketingSystem.Forms
             isCollapsed = false;
             DashboardUC dbuc = new DashboardUC();
             AddControlsToPanel(dbuc);
+            lblName.Text = value;
         }
 
         private void shutDownButton_Click(object sender, EventArgs e)
