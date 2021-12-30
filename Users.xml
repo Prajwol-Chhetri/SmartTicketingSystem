@@ -7,4 +7,25 @@
     <Role>Admin</Role>
     <Password>admin</Password>
   </Users>
+  <Users>
+    <FirstName>staff</FirstName>
+    <LastName>user</LastName>
+    <Email>staff@gmail.com</Email>
+    <Role>Staff</Role>
+    <Password>staff</Password>
+  </Users>
+  <Users>
+    <FirstName>staff</FirstName>
+    <LastName>user</LastName>
+    <Email>staff@gmail.com</Email>
+    <Role>Staff</Role>
+    <Password>staff</Password>
+  </Users>
+  <Users>
+    <FirstName>staff</FirstName>
+    <LastName>user</LastName>
+    <Email>staff1@gmail.com</Email>
+    <Role>Staff</Role>
+    <Password>staff</Password>
+  </Users>
 </ArrayOfUsers>

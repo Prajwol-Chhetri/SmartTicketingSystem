@@ -92,6 +92,8 @@ namespace SmartTicketingSystem.Forms
         private void btnAdminStaffs_Click(object sender, EventArgs e)
         {
             moveSidePanel(btnAdminStaffs);
+            RegistrationUC rguc = new RegistrationUC();
+            AddControlsToPanel(rguc);
         }
 
         private void btnAdminReport_Click(object sender, EventArgs e)

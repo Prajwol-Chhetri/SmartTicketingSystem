@@ -41,6 +41,7 @@ namespace SmartTicketingSystem.UserControls
             this.label7 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.button1 = new System.Windows.Forms.Button();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -107,6 +108,7 @@ namespace SmartTicketingSystem.UserControls
             // 
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel3.Controls.Add(this.checkedListBox1);
             this.panel3.Controls.Add(this.pictureBox3);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.label7);
@@ -159,6 +161,14 @@ namespace SmartTicketingSystem.UserControls
             this.button1.TabIndex = 6;
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Location = new System.Drawing.Point(134, 108);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(120, 85);
+            this.checkedListBox1.TabIndex = 4;
+            // 
             // DashboardUC
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -193,5 +203,6 @@ namespace SmartTicketingSystem.UserControls
         private System.Windows.Forms.Label label7;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
     }
 }

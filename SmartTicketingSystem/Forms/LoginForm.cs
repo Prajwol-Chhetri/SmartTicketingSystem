@@ -48,6 +48,9 @@ namespace SmartTicketingSystem
                 FileStream fileStream = new FileStream(path, FileMode.Open, FileAccess.Read);
                 users = (List<Users>)xmlSerializer.Deserialize(fileStream);
 
+                // setting authenticated to false by default
+                bool authenticated = false;
+
                 // checking if the entered email and password is saved and matches for the user
                 foreach (var user in users)
                 {
@@ -56,19 +59,26 @@ namespace SmartTicketingSystem
                         // displaying dashboard based on role if user is authorized
                         if (user.Role == RoleType.Admin)
                         {
+                            fileStream.Close();
+                            authenticated = true;
                             adminDashboard.ShowDialog();
                             break;
                         }
                         else
                         {
+                            fileStream.Close();
+                            authenticated = true;
                             staffDashboard.ShowDialog();
                             break;
                         }
                     }
-                    else
-                    {
-                        MessageBox.Show("INVALID CREDENTIALS");
-                    }
+                }
+
+                // displaying error if credentials is not correct
+                if (authenticated ==  false)
+                {
+                    MessageBox.Show("INVALID CREDENTIALS");
+                    fileStream.Close();
                 }
 
             }
