@@ -52,6 +52,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Category.cs" />
+    <Compile Include="Classes\Ticket.cs" />
+    <Compile Include="Classes\Timing.cs" />
     <Compile Include="Classes\Users.cs" />
     <Compile Include="Forms\AdminRegisterForm.cs">
       <SubType>Form</SubType>
@@ -79,11 +82,35 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\CreateCategoryUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CreateCategoryUC.Designer.cs">
+      <DependentUpon>CreateCategoryUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CreateTicketUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CreateTicketUC.Designer.cs">
+      <DependentUpon>CreateTicketUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CreateTimingUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CreateTimingUC.Designer.cs">
+      <DependentUpon>CreateTimingUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\DashboardUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\DashboardUC.Designer.cs">
       <DependentUpon>DashboardUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DeRegistration.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\DeRegistration.Designer.cs">
+      <DependentUpon>DeRegistration.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\RegistrationUC.cs">
       <SubType>UserControl</SubType>
@@ -112,13 +139,26 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserControls\CreateCategoryUC.resx">
+      <DependentUpon>CreateCategoryUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CreateTicketUC.resx">
+      <DependentUpon>CreateTicketUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CreateTimingUC.resx">
+      <DependentUpon>CreateTimingUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\DashboardUC.resx">
       <DependentUpon>DashboardUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\DeRegistration.resx">
+      <DependentUpon>DeRegistration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\RegistrationUC.resx">
       <DependentUpon>RegistrationUC.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\SmartTicketingSystem.Classes.Users.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -32,6 +32,8 @@ namespace SmartTicketingSystem.Forms
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminDashboardForm));
             this.panelLeft = new System.Windows.Forms.Panel();
+            this.btnVisitorTimings = new System.Windows.Forms.Button();
+            this.btnVisitorCategories = new System.Windows.Forms.Button();
             this.btnAdminReport = new System.Windows.Forms.Button();
             this.btnAdminStaffs = new System.Windows.Forms.Button();
             this.btnAdminTickets = new System.Windows.Forms.Button();
@@ -63,6 +65,8 @@ namespace SmartTicketingSystem.Forms
             // panelLeft
             // 
             this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.panelLeft.Controls.Add(this.btnVisitorTimings);
+            this.panelLeft.Controls.Add(this.btnVisitorCategories);
             this.panelLeft.Controls.Add(this.btnAdminReport);
             this.panelLeft.Controls.Add(this.btnAdminStaffs);
             this.panelLeft.Controls.Add(this.btnAdminTickets);
@@ -75,6 +79,40 @@ namespace SmartTicketingSystem.Forms
             this.panelLeft.Size = new System.Drawing.Size(216, 720);
             this.panelLeft.TabIndex = 0;
             // 
+            // btnVisitorTimings
+            // 
+            this.btnVisitorTimings.FlatAppearance.BorderSize = 0;
+            this.btnVisitorTimings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVisitorTimings.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVisitorTimings.ForeColor = System.Drawing.Color.White;
+            this.btnVisitorTimings.Image = ((System.Drawing.Image)(resources.GetObject("btnVisitorTimings.Image")));
+            this.btnVisitorTimings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVisitorTimings.Location = new System.Drawing.Point(12, 338);
+            this.btnVisitorTimings.Name = "btnVisitorTimings";
+            this.btnVisitorTimings.Size = new System.Drawing.Size(194, 60);
+            this.btnVisitorTimings.TabIndex = 9;
+            this.btnVisitorTimings.Text = "  Timings";
+            this.btnVisitorTimings.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnVisitorTimings.UseVisualStyleBackColor = true;
+            this.btnVisitorTimings.Click += new System.EventHandler(this.btnVisitorTimings_Click);
+            // 
+            // btnVisitorCategories
+            // 
+            this.btnVisitorCategories.FlatAppearance.BorderSize = 0;
+            this.btnVisitorCategories.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVisitorCategories.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVisitorCategories.ForeColor = System.Drawing.Color.White;
+            this.btnVisitorCategories.Image = ((System.Drawing.Image)(resources.GetObject("btnVisitorCategories.Image")));
+            this.btnVisitorCategories.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVisitorCategories.Location = new System.Drawing.Point(12, 274);
+            this.btnVisitorCategories.Name = "btnVisitorCategories";
+            this.btnVisitorCategories.Size = new System.Drawing.Size(194, 60);
+            this.btnVisitorCategories.TabIndex = 8;
+            this.btnVisitorCategories.Text = "  Categories";
+            this.btnVisitorCategories.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnVisitorCategories.UseVisualStyleBackColor = true;
+            this.btnVisitorCategories.Click += new System.EventHandler(this.btnVisitorCategories_Click);
+            // 
             // btnAdminReport
             // 
             this.btnAdminReport.FlatAppearance.BorderSize = 0;
@@ -83,7 +121,7 @@ namespace SmartTicketingSystem.Forms
             this.btnAdminReport.ForeColor = System.Drawing.Color.White;
             this.btnAdminReport.Image = ((System.Drawing.Image)(resources.GetObject("btnAdminReport.Image")));
             this.btnAdminReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdminReport.Location = new System.Drawing.Point(12, 330);
+            this.btnAdminReport.Location = new System.Drawing.Point(12, 460);
             this.btnAdminReport.Name = "btnAdminReport";
             this.btnAdminReport.Size = new System.Drawing.Size(194, 60);
             this.btnAdminReport.TabIndex = 7;
@@ -100,7 +138,7 @@ namespace SmartTicketingSystem.Forms
             this.btnAdminStaffs.ForeColor = System.Drawing.Color.White;
             this.btnAdminStaffs.Image = ((System.Drawing.Image)(resources.GetObject("btnAdminStaffs.Image")));
             this.btnAdminStaffs.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdminStaffs.Location = new System.Drawing.Point(12, 274);
+            this.btnAdminStaffs.Location = new System.Drawing.Point(12, 404);
             this.btnAdminStaffs.Name = "btnAdminStaffs";
             this.btnAdminStaffs.Size = new System.Drawing.Size(194, 60);
             this.btnAdminStaffs.TabIndex = 6;
@@ -376,5 +414,7 @@ namespace SmartTicketingSystem.Forms
         private System.Windows.Forms.Timer timerTime;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panelControls;
+        private System.Windows.Forms.Button btnVisitorTimings;
+        private System.Windows.Forms.Button btnVisitorCategories;
     }
 }

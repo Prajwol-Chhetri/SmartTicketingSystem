@@ -88,6 +88,8 @@ namespace SmartTicketingSystem.Forms
         private void btnAdminTickets_Click(object sender, EventArgs e)
         {
             moveSidePanel(btnAdminTickets);
+            CreateTicketUC tcuc = new CreateTicketUC();
+            AddControlsToPanel(tcuc);
         }
 
         private void btnAdminStaffs_Click(object sender, EventArgs e)
@@ -106,6 +108,20 @@ namespace SmartTicketingSystem.Forms
         {
             DateTime dt = DateTime.Now;
             labelTime.Text = dt.ToString("HH:mm:ss");
+        }
+
+        private void btnVisitorCategories_Click(object sender, EventArgs e)
+        {
+            moveSidePanel(btnVisitorCategories);
+            CreateCategoryUC categoryUC = new CreateCategoryUC();
+            AddControlsToPanel(categoryUC);
+        }
+
+        private void btnVisitorTimings_Click(object sender, EventArgs e)
+        {
+            moveSidePanel(btnVisitorTimings);
+            CreateTimingUC timingUC = new CreateTimingUC();
+            AddControlsToPanel(timingUC);
         }
     }
 }
