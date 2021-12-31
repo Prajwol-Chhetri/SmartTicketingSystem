@@ -1,7 +1,7 @@
 ﻿
 namespace SmartTicketingSystem.UserControls
 {
-    partial class DeRegistration
+    partial class DeRegistrationUC
     {
         /// <summary> 
         /// Required designer variable.

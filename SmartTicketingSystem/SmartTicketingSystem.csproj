@@ -106,17 +106,23 @@
     <Compile Include="UserControls\DashboardUC.Designer.cs">
       <DependentUpon>DashboardUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\DeRegistration.cs">
+    <Compile Include="UserControls\DeRegistrationUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\DeRegistration.Designer.cs">
-      <DependentUpon>DeRegistration.cs</DependentUpon>
+    <Compile Include="UserControls\DeRegistrationUC.Designer.cs">
+      <DependentUpon>DeRegistrationUC.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\RegistrationUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\RegistrationUC.Designer.cs">
       <DependentUpon>RegistrationUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\StaffHandlingUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\StaffHandlingUC.Designer.cs">
+      <DependentUpon>StaffHandlingUC.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Forms\AdminRegisterForm.resx">
       <DependentUpon>AdminRegisterForm.cs</DependentUpon>
@@ -151,11 +157,14 @@
     <EmbeddedResource Include="UserControls\DashboardUC.resx">
       <DependentUpon>DashboardUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\DeRegistration.resx">
-      <DependentUpon>DeRegistration.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\DeRegistrationUC.resx">
+      <DependentUpon>DeRegistrationUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\RegistrationUC.resx">
       <DependentUpon>RegistrationUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\StaffHandlingUC.resx">
+      <DependentUpon>StaffHandlingUC.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\SmartTicketingSystem.Classes.Users.datasource" />

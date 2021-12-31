@@ -15,12 +15,12 @@ using SmartTicketingSystem.Classes;
 
 namespace SmartTicketingSystem.UserControls
 {
-    public partial class DeRegistration : UserControl
+    public partial class DeRegistrationUC : UserControl
     {
         XmlSerializer xmlSerializer;
         List<Users> users;
 
-        public DeRegistration()
+        public DeRegistrationUC()
         {
             InitializeComponent();
             users = new List<Users>();
