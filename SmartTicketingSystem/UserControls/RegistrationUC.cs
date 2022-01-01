@@ -25,6 +25,23 @@ namespace SmartTicketingSystem.UserControls
             InitializeComponent();
             users = new List<Users>();
             xmlSerializer = new XmlSerializer(typeof(List<Users>));
+
+            // path of users xml file
+            String path = "D:/work/year 3/Coursework/Application Dev/SmartTicketingSystem/Users.xml";
+
+            // loading users from existing XML file
+            FileStream existingUsersFS = new FileStream(path, FileMode.Open, FileAccess.Read);
+            users = (List<Users>)xmlSerializer.Deserialize(existingUsersFS);
+            existingUsersFS.Close();
+
+            // loading users into data grid
+            LoadData(users);
+        }
+
+        public void LoadData(List<Users> x)
+        {
+            categoryDataView.DataSource = null;
+            categoryDataView.DataSource = x;
         }
 
         private void btnAddStaff_Click(object sender, EventArgs e)
@@ -35,14 +52,6 @@ namespace SmartTicketingSystem.UserControls
 
             // path of users xml file
             String path = "D:/work/year 3/Coursework/Application Dev/SmartTicketingSystem/Users.xml";
-
-            // if file exists loading users from xml file
-            if (File.Exists(path))
-            {
-                FileStream existingUsersFS = new FileStream(path, FileMode.Open, FileAccess.Read);
-                users = (List<Users>)xmlSerializer.Deserialize(existingUsersFS);
-                existingUsersFS.Close();
-            }
 
             // overwriting existing xml file
             FileStream fileStream = new FileStream(path, FileMode.Create, FileAccess.Write);
@@ -76,6 +85,9 @@ namespace SmartTicketingSystem.UserControls
             // serializing register Users object to XMl file and closing it
             xmlSerializer.Serialize(fileStream, users);
             fileStream.Close();
+
+            // loading users into data grid
+            LoadData(users);
         }
     }
 }
