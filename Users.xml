@@ -1,31 +1,10 @@
 <?xml version="1.0"?>
 <ArrayOfUsers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Users>
-    <FirstName>admin</FirstName>
-    <LastName>admin</LastName>
+    <FirstName>Prajwol</FirstName>
+    <LastName>Chhetri</LastName>
     <Email>admin@gmail.com</Email>
     <Role>Admin</Role>
     <Password>admin</Password>
-  </Users>
-  <Users>
-    <FirstName>staff</FirstName>
-    <LastName>user</LastName>
-    <Email>staff@gmail.com</Email>
-    <Role>Staff</Role>
-    <Password>staff</Password>
-  </Users>
-  <Users>
-    <FirstName>staff</FirstName>
-    <LastName>user</LastName>
-    <Email>staff@gmail.com</Email>
-    <Role>Staff</Role>
-    <Password>staff</Password>
-  </Users>
-  <Users>
-    <FirstName>staff</FirstName>
-    <LastName>user</LastName>
-    <Email>staff1@gmail.com</Email>
-    <Role>Staff</Role>
-    <Password>staff</Password>
   </Users>
 </ArrayOfUsers>

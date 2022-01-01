@@ -18,17 +18,57 @@ namespace SmartTicketingSystem.UserControls
     public partial class CreateTicketUC : UserControl
     {
         XmlSerializer xmlSerializer;
+        XmlSerializer xmlTimingSerializer;
+        XmlSerializer xmlCategorySerializer;
         List<Ticket> tickets;
+        List<Timing> timings;
+        List<Category> categories;
 
         public CreateTicketUC()
         {
             InitializeComponent();
             tickets = new List<Ticket>();
+            timings = new List<Timing>();
+            categories = new List<Category>();
             xmlSerializer = new XmlSerializer(typeof(List<Ticket>));
-            /*
-            comboTicketTime.DataSource = Enum.GetValues(typeof(Timings));
-            comboTicketCategory.DataSource = Enum.GetValues(typeof(NumberOfPeople));
-            */
+            xmlTimingSerializer = new XmlSerializer(typeof(List<Timing>));
+            xmlCategorySerializer = new XmlSerializer(typeof(List<Category>));
+
+
+            // loading data from timings xml file to display in combobox
+            string timingXMLPath = "D:/work/year 3/Coursework/Application Dev/SmartTicketingSystem/Timings.xml";
+            if (File.Exists(timingXMLPath))
+            {
+                FileStream existingTimingsFS = new FileStream(timingXMLPath, FileMode.Open, FileAccess.Read);
+                timings = (List<Timing>)xmlTimingSerializer.Deserialize(existingTimingsFS);
+                existingTimingsFS.Close();
+
+                // loading data into timing combobox by binding timings list as datasource
+                comboTicketTime.DataSource = timings;
+                comboTicketTime.DisplayMember = "timingName";
+            }
+            else
+            {
+                MessageBox.Show("NO TIMINGS PLEASE CREATE A TIMINGS FIRST");
+            }
+
+
+            // loading data from categories xml file to display in combobox
+            string categoryXMLPath = "D:/work/year 3/Coursework/Application Dev/SmartTicketingSystem/Categories.xml";
+            if (File.Exists(categoryXMLPath))
+            {
+                FileStream existingCategoriesFS = new FileStream(categoryXMLPath, FileMode.Open, FileAccess.Read);
+                categories = (List<Category>)xmlCategorySerializer.Deserialize(existingCategoriesFS);
+                existingCategoriesFS.Close();
+
+                // loading data into categories comboboxby binding categories list as datasource
+                comboTicketCategory.DataSource = categories;
+                comboTicketCategory.DisplayMember = "categoryName";
+            }
+            else
+            {
+                MessageBox.Show("NO CATEGORIES PLEASE CREATE A CATEGORY FIRST");
+            }
         }
 
         private void btnCreateTicket_Click(object sender, EventArgs e)
@@ -53,10 +93,15 @@ namespace SmartTicketingSystem.UserControls
 
             ticket.id = Guid.NewGuid();
             ticket.ticketRate = Convert.ToInt32(txtRate.Text);
-            /*
-            ticket.timing = (Timings)Guid.Parse(typeof(Timings), comboTicketTime.Text);
-            ticket.category = (NumberOfPeople)Guid.Parse(typeof(NumberOfPeople), comboTicketCategory.Text);
-            */
+
+            // typecasting selected item to Timing to fetch id
+            var selectedTiming = (Timing)comboTicketTime.SelectedItem;
+            ticket.timing = selectedTiming.id;
+
+            // typecasting selected item to Category to fetch id
+            var selectedCategory = (Category)comboTicketCategory.SelectedItem;
+            ticket.category = selectedCategory.id;
+
             tickets.Add(ticket);
             MessageBox.Show("ADDED TICKET SUCCESSFULLY");
 
