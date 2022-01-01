@@ -47,7 +47,6 @@ namespace SmartTicketingSystem.UserControls
             categoryDataView.DataSource = x;
         }
 
-
         private void btnCreateCategory_Click(object sender, EventArgs e)
         {
             // path of categories xml file
@@ -72,8 +71,6 @@ namespace SmartTicketingSystem.UserControls
 
             //updating data grid view
             LoadData(categories);
-            categoryDataView.Update();
-            categoryDataView.Refresh();
         }
     }
 }

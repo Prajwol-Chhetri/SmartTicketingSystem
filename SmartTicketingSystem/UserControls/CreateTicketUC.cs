@@ -68,14 +68,9 @@ namespace SmartTicketingSystem.UserControls
             {
                 MessageBox.Show("NO CATEGORIES PLEASE CREATE A CATEGORY FIRST");
             }
-        }
 
-        private void btnCreateTicket_Click(object sender, EventArgs e)
-        {
             // path of tickets xml file
             String path = "D:/work/year 3/Coursework/Application Dev/SmartTicketingSystem/Tickets.xml";
-
-
             // if file exists loading tickets from xml file
             if (File.Exists(path))
             {
@@ -83,6 +78,21 @@ namespace SmartTicketingSystem.UserControls
                 tickets = (List<Ticket>)xmlSerializer.Deserialize(existingTicketsFS);
                 existingTicketsFS.Close();
             }
+
+            // loading data into data grid view
+            LoadData(tickets);
+        }
+
+        public void LoadData(List<Ticket> x)
+        {
+            ticketDataView.DataSource = null;
+            ticketDataView.DataSource = x;
+        }
+
+        private void btnCreateTicket_Click(object sender, EventArgs e)
+        {
+            // path of tickets xml file
+            String path = "D:/work/year 3/Coursework/Application Dev/SmartTicketingSystem/Tickets.xml";
 
             // overwriting existing xml file
             FileStream fileStream = new FileStream(path, FileMode.Create, FileAccess.Write);
@@ -109,6 +119,9 @@ namespace SmartTicketingSystem.UserControls
             // serializing tickets object to XMl file and closing it
             xmlSerializer.Serialize(fileStream, tickets);
             fileStream.Close();
+
+            // loading data into data grid view
+            LoadData(tickets);
         }
     }
 }
