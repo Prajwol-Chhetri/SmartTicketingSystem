@@ -1,2 +1,17 @@
 <?xml version="1.0"?>
-<ArrayOfTicket xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+<ArrayOfTicket xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Ticket>
+    <id>4aec9e3a-e624-4fcd-8b76-4a9e056b9779</id>
+    <ticketRate>100</ticketRate>
+    <timing>83c33c72-f621-4929-bfcb-5cbb949bd5d6</timing>
+    <category>02c06c8f-5038-4fd7-be31-0a787a118a29</category>
+    <ticketName>child one hour</ticketName>
+  </Ticket>
+  <Ticket>
+    <id>36777675-8691-40f2-be41-04bfe5b9a11c</id>
+    <ticketRate>500</ticketRate>
+    <timing>8e12b9e8-f05b-497f-92e0-100dcd6e4bb3</timing>
+    <category>cabe843a-6520-41a4-9e5d-8d39b2b88d89</category>
+    <ticketName>group of 5 one hour</ticketName>
+  </Ticket>
+</ArrayOfTicket>

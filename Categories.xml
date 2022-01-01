@@ -1,8 +1,18 @@
 <?xml version="1.0"?>
 <ArrayOfCategory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Category>
-    <id>a9d23719-a9c7-4bd6-81dc-558a51414370</id>
+    <id>cc61cf16-98f2-4b18-87e9-7c7038eeef17</id>
+    <noOfPeople>1</noOfPeople>
+    <categoryName>adult</categoryName>
+  </Category>
+  <Category>
+    <id>02c06c8f-5038-4fd7-be31-0a787a118a29</id>
     <noOfPeople>1</noOfPeople>
     <categoryName>child</categoryName>
+  </Category>
+  <Category>
+    <id>cabe843a-6520-41a4-9e5d-8d39b2b88d89</id>
+    <noOfPeople>5</noOfPeople>
+    <categoryName>group of 5</categoryName>
   </Category>
 </ArrayOfCategory>

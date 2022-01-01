@@ -136,6 +136,12 @@
     <Compile Include="UserControls\TicketHandlingUC.Designer.cs">
       <DependentUpon>TicketHandlingUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UpdateTicketUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UpdateTicketUC.Designer.cs">
+      <DependentUpon>UpdateTicketUC.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\AdminRegisterForm.resx">
       <DependentUpon>AdminRegisterForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -183,6 +189,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\TicketHandlingUC.resx">
       <DependentUpon>TicketHandlingUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UpdateTicketUC.resx">
+      <DependentUpon>UpdateTicketUC.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\SmartTicketingSystem.Classes.Users.datasource" />

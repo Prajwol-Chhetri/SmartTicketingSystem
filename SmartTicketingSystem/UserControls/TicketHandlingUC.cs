@@ -35,5 +35,11 @@ namespace SmartTicketingSystem.UserControls
             DeleteTicketUC deleteUC = new DeleteTicketUC();
             AddControlsToPanel(deleteUC);
         }
+
+        private void btnUpdateTicket_Click(object sender, EventArgs e)
+        {
+            UpdateTicketUC updateUC = new UpdateTicketUC();
+            AddControlsToPanel(updateUC);
+        }
     }
 }

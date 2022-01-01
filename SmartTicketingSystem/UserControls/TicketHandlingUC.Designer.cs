@@ -32,11 +32,13 @@ namespace SmartTicketingSystem.UserControls
             this.panelControls = new System.Windows.Forms.Panel();
             this.btnDeleteTicket = new System.Windows.Forms.Button();
             this.btnCreateTicket = new System.Windows.Forms.Button();
+            this.btnUpdateTicket = new System.Windows.Forms.Button();
             this.panelControls.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelControls
             // 
+            this.panelControls.Controls.Add(this.btnUpdateTicket);
             this.panelControls.Controls.Add(this.btnDeleteTicket);
             this.panelControls.Controls.Add(this.btnCreateTicket);
             this.panelControls.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -79,6 +81,23 @@ namespace SmartTicketingSystem.UserControls
             this.btnCreateTicket.UseVisualStyleBackColor = false;
             this.btnCreateTicket.Click += new System.EventHandler(this.btnCreateTicket_Click);
             // 
+            // btnUpdateTicket
+            // 
+            this.btnUpdateTicket.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUpdateTicket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.btnUpdateTicket.FlatAppearance.BorderSize = 0;
+            this.btnUpdateTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdateTicket.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateTicket.ForeColor = System.Drawing.Color.White;
+            this.btnUpdateTicket.Location = new System.Drawing.Point(275, 268);
+            this.btnUpdateTicket.Name = "btnUpdateTicket";
+            this.btnUpdateTicket.Size = new System.Drawing.Size(434, 44);
+            this.btnUpdateTicket.TabIndex = 47;
+            this.btnUpdateTicket.Text = "Update Ticket";
+            this.btnUpdateTicket.UseVisualStyleBackColor = false;
+            this.btnUpdateTicket.Click += new System.EventHandler(this.btnUpdateTicket_Click);
+            // 
             // TicketHandlingUC
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -96,5 +115,6 @@ namespace SmartTicketingSystem.UserControls
         private System.Windows.Forms.Panel panelControls;
         private System.Windows.Forms.Button btnDeleteTicket;
         private System.Windows.Forms.Button btnCreateTicket;
+        private System.Windows.Forms.Button btnUpdateTicket;
     }
 }
