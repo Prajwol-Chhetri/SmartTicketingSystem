@@ -39,8 +39,14 @@
     <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
       <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
     </Reference>
+    <Reference Include="NodaTime, Version=3.0.9.0, Culture=neutral, PublicKeyToken=4226afe0d9b296d1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NodaTime.3.0.9\lib\netstandard2.0\NodaTime.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.7.1\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,10 +56,26 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Xceed.Wpf.AvalonDock, Version=4.2.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.4.2.0\lib\net40\Xceed.Wpf.AvalonDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero, Version=4.2.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.4.2.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Metro, Version=4.2.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.4.2.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010, Version=4.2.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.4.2.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.VS2010.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Toolkit, Version=4.2.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.4.2.0\lib\net40\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Category.cs" />
     <Compile Include="Classes\Ticket.cs" />
+    <Compile Include="Classes\TicketSale.cs" />
     <Compile Include="Classes\Timing.cs" />
     <Compile Include="Classes\Users.cs" />
     <Compile Include="Forms\AdminRegisterForm.cs">
@@ -124,6 +146,12 @@
     <Compile Include="UserControls\RegistrationUC.Designer.cs">
       <DependentUpon>RegistrationUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\SellTicket.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\SellTicket.Designer.cs">
+      <DependentUpon>SellTicket.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\StaffHandlingUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -184,6 +212,9 @@
     <EmbeddedResource Include="UserControls\RegistrationUC.resx">
       <DependentUpon>RegistrationUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\SellTicket.resx">
+      <DependentUpon>SellTicket.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\StaffHandlingUC.resx">
       <DependentUpon>StaffHandlingUC.cs</DependentUpon>
     </EmbeddedResource>
@@ -196,6 +227,7 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\SmartTicketingSystem.Classes.Category.datasource" />
     <None Include="Properties\DataSources\SmartTicketingSystem.Classes.Ticket.datasource" />
+    <None Include="Properties\DataSources\SmartTicketingSystem.Classes.TicketSale.datasource" />
     <None Include="Properties\DataSources\SmartTicketingSystem.Classes.Timing.datasource" />
     <None Include="Properties\DataSources\SmartTicketingSystem.Classes.Users.datasource" />
     <None Include="Properties\Settings.settings">

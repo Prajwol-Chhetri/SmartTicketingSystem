@@ -1,17 +1,17 @@
 <?xml version="1.0"?>
 <ArrayOfTicket xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Ticket>
-    <id>4aec9e3a-e624-4fcd-8b76-4a9e056b9779</id>
+    <id>96f9b95d-9a9b-4e18-a2a3-34b68427b9ca</id>
     <ticketRate>100</ticketRate>
     <timing>83c33c72-f621-4929-bfcb-5cbb949bd5d6</timing>
     <category>02c06c8f-5038-4fd7-be31-0a787a118a29</category>
-    <ticketName>child one hour</ticketName>
+    <ticketName>child-1</ticketName>
   </Ticket>
   <Ticket>
-    <id>4860da0a-c236-483a-a995-37c65e692d44</id>
+    <id>4a0d9a27-e3a5-4203-bfbc-a941d8ddb9f2</id>
     <ticketRate>200</ticketRate>
     <timing>83c33c72-f621-4929-bfcb-5cbb949bd5d6</timing>
-    <category>06545ef3-bd34-4b8c-96fe-56a18507cad2</category>
-    <ticketName>ticket for 69</ticketName>
+    <category>cc61cf16-98f2-4b18-87e9-7c7038eeef17</category>
+    <ticketName>adult-1</ticketName>
   </Ticket>
 </ArrayOfTicket>

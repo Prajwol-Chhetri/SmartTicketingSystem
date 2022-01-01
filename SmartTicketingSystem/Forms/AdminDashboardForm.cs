@@ -123,5 +123,12 @@ namespace SmartTicketingSystem.Forms
             CreateTimingUC timingUC = new CreateTimingUC();
             AddControlsToPanel(timingUC);
         }
+
+        private void btnSellTicket_Click(object sender, EventArgs e)
+        {
+            moveSidePanel(btnSellTicket);
+            SellTicket sellTicketUC = new SellTicket();
+            AddControlsToPanel(sellTicketUC);
+        }
     }
 }
