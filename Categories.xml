@@ -15,4 +15,44 @@
     <noOfPeople>5</noOfPeople>
     <categoryName>group of 5</categoryName>
   </Category>
+  <Category>
+    <id>83fb8d91-eafe-4e47-b4f0-5e409e5a8b2c</id>
+    <noOfPeople>10</noOfPeople>
+    <categoryName>group of 10</categoryName>
+  </Category>
+  <Category>
+    <id>0b2955dc-5328-42dc-8605-9d7d1d088f49</id>
+    <noOfPeople>15</noOfPeople>
+    <categoryName>group of 15</categoryName>
+  </Category>
+  <Category>
+    <id>b0a62aca-9d5c-4851-b5d6-cd190e7c4321</id>
+    <noOfPeople>20</noOfPeople>
+    <categoryName>group of 10</categoryName>
+  </Category>
+  <Category>
+    <id>8d259755-ab31-4949-9151-3e58f4345b08</id>
+    <noOfPeople>25</noOfPeople>
+    <categoryName>group of 20</categoryName>
+  </Category>
+  <Category>
+    <id>326628ad-3a89-4bd5-a81b-4a37392d5957</id>
+    <noOfPeople>30</noOfPeople>
+    <categoryName>group of 30</categoryName>
+  </Category>
+  <Category>
+    <id>bb0296a0-173b-401d-a601-630cfaa9862d</id>
+    <noOfPeople>4</noOfPeople>
+    <categoryName>group of 4</categoryName>
+  </Category>
+  <Category>
+    <id>80f92029-fe9c-4943-b56b-418e676179c1</id>
+    <noOfPeople>11</noOfPeople>
+    <categoryName>group of 11</categoryName>
+  </Category>
+  <Category>
+    <id>06545ef3-bd34-4b8c-96fe-56a18507cad2</id>
+    <noOfPeople>69</noOfPeople>
+    <categoryName>Nice</categoryName>
+  </Category>
 </ArrayOfCategory>

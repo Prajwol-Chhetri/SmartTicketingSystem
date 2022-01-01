@@ -194,6 +194,7 @@
       <DependentUpon>UpdateTicketUC.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\SmartTicketingSystem.Classes.Category.datasource" />
     <None Include="Properties\DataSources\SmartTicketingSystem.Classes.Users.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -25,10 +25,8 @@ namespace SmartTicketingSystem.UserControls
             InitializeComponent();
             categories = new List<Category>();
             xmlSerializer = new XmlSerializer(typeof(List<Category>));
-        }
 
-        private void btnCreateCategory_Click(object sender, EventArgs e)
-        {
+
             // path of categories xml file
             String path = "D:/work/year 3/Coursework/Application Dev/SmartTicketingSystem/Categories.xml";
 
@@ -39,6 +37,21 @@ namespace SmartTicketingSystem.UserControls
                 categories = (List<Category>)xmlSerializer.Deserialize(existingCategoriesFS);
                 existingCategoriesFS.Close();
             }
+
+            LoadData(categories);
+        }
+
+        public void LoadData(List<Category> x)
+        {
+            categoryDataView.DataSource = null;
+            categoryDataView.DataSource = x;
+        }
+
+
+        private void btnCreateCategory_Click(object sender, EventArgs e)
+        {
+            // path of categories xml file
+            String path = "D:/work/year 3/Coursework/Application Dev/SmartTicketingSystem/Categories.xml";
 
             // overwriting existing xml file
             FileStream fileStream = new FileStream(path, FileMode.Create, FileAccess.Write);
@@ -56,6 +69,11 @@ namespace SmartTicketingSystem.UserControls
             fileStream.Close();
 
             MessageBox.Show("ADDED CATEGORY SUCCESSFULLY");
+
+            //updating data grid view
+            LoadData(categories);
+            categoryDataView.Update();
+            categoryDataView.Refresh();
         }
     }
 }
