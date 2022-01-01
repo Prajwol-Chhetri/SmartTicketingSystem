@@ -32,6 +32,9 @@ namespace SmartTicketingSystem.UserControls
                 tickets = (List<Ticket>)xmlSerializer.Deserialize(existingTicketsFS);
                 existingTicketsFS.Close();
 
+                // loading data into data grid view
+                LoadData(tickets);
+                
                 // loading data into timing combobox by binding tickets list as datasource
                 comboTicketName.DataSource = tickets;
                 comboTicketName.DisplayMember = "ticketName";
@@ -40,6 +43,12 @@ namespace SmartTicketingSystem.UserControls
             {
                 MessageBox.Show("NO TICKETS PLEASE CREATE A TICKET FIRST");
             }
+        }
+
+        public void LoadData(List<Ticket> x)
+        {
+            ticketDataView.DataSource = null;
+            ticketDataView.DataSource = x;
         }
 
         private void btnDeleteTicket_Click(object sender, EventArgs e)
@@ -66,6 +75,9 @@ namespace SmartTicketingSystem.UserControls
                 // serializing Tickets object to XMl file and closing it
                 xmlSerializer.Serialize(fileStream, tickets);
                 fileStream.Close();
+
+                // loading updated data into data grid view
+                LoadData(tickets);
             }
         }
     }

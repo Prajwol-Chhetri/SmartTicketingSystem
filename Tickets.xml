@@ -8,13 +8,6 @@
     <ticketName>child one hour</ticketName>
   </Ticket>
   <Ticket>
-    <id>36777675-8691-40f2-be41-04bfe5b9a11c</id>
-    <ticketRate>500</ticketRate>
-    <timing>8e12b9e8-f05b-497f-92e0-100dcd6e4bb3</timing>
-    <category>cabe843a-6520-41a4-9e5d-8d39b2b88d89</category>
-    <ticketName>group of 5 one hour</ticketName>
-  </Ticket>
-  <Ticket>
     <id>4860da0a-c236-483a-a995-37c65e692d44</id>
     <ticketRate>200</ticketRate>
     <timing>83c33c72-f621-4929-bfcb-5cbb949bd5d6</timing>
