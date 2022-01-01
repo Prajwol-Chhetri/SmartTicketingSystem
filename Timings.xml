@@ -15,4 +15,9 @@
     <noOfHours>24</noOfHours>
     <timingName>whole day</timingName>
   </Timing>
+  <Timing>
+    <id>61ba6f69-69eb-4ab7-b19d-581499cfff25</id>
+    <noOfHours>5</noOfHours>
+    <timingName>five hour</timingName>
+  </Timing>
 </ArrayOfTiming>

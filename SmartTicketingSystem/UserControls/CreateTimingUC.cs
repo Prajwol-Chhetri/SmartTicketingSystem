@@ -24,10 +24,7 @@ namespace SmartTicketingSystem.UserControls
             InitializeComponent();
             timings = new List<Timing>();
             xmlSerializer = new XmlSerializer(typeof(List<Timing>));
-        }
 
-        private void btnCreateTiming_Click(object sender, EventArgs e)
-        {
             // path of timings xml file
             String path = "D:/work/year 3/Coursework/Application Dev/SmartTicketingSystem/Timings.xml";
 
@@ -38,6 +35,20 @@ namespace SmartTicketingSystem.UserControls
                 timings = (List<Timing>)xmlSerializer.Deserialize(existingTimingsFS);
                 existingTimingsFS.Close();
             }
+
+            LoadData(timings);
+        }
+
+        public void LoadData(List<Timing> x)
+        {
+            timingDataView.DataSource = null;
+            timingDataView.DataSource = x;
+        }
+
+        private void btnCreateTiming_Click(object sender, EventArgs e)
+        {
+            // path of timings xml file
+            String path = "D:/work/year 3/Coursework/Application Dev/SmartTicketingSystem/Timings.xml";
 
             // overwriting existing xml file
             FileStream fileStream = new FileStream(path, FileMode.Create, FileAccess.Write);
@@ -55,6 +66,8 @@ namespace SmartTicketingSystem.UserControls
             fileStream.Close();
 
             MessageBox.Show("ADDED TIMING SUCCESSFULLY");
+
+            LoadData(timings);
         }
     }
 }
