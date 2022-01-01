@@ -106,6 +106,12 @@
     <Compile Include="UserControls\DashboardUC.Designer.cs">
       <DependentUpon>DashboardUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\DeleteTicketUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\DeleteTicketUC.Designer.cs">
+      <DependentUpon>DeleteTicketUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\DeRegistrationUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -162,6 +168,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\DashboardUC.resx">
       <DependentUpon>DashboardUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\DeleteTicketUC.resx">
+      <DependentUpon>DeleteTicketUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\DeRegistrationUC.resx">
       <DependentUpon>DeRegistrationUC.cs</DependentUpon>

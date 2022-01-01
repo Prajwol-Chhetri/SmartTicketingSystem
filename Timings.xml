@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<ArrayOfTiming xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Timing>
+    <id>6cd35a81-9e30-4b3f-8cba-eaf11c6da8c0</id>
+    <noOfHours>1</noOfHours>
+    <timingName>one hour</timingName>
+  </Timing>
+</ArrayOfTiming>

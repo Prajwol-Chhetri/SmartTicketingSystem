@@ -16,5 +16,7 @@ namespace SmartTicketingSystem.Classes
         public Guid timing { get; set; }
 
         public Guid category { get; set; }
+
+        public string ticketName { get; set; }
     }
 }

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<ArrayOfCategory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Category>
+    <id>a9d23719-a9c7-4bd6-81dc-558a51414370</id>
+    <noOfPeople>1</noOfPeople>
+    <categoryName>child</categoryName>
+  </Category>
+</ArrayOfCategory>

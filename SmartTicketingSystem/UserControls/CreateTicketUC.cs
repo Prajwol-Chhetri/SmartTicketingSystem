@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Serialization;
 using System.IO;
-using System.Text.RegularExpressions;
 using SmartTicketingSystem.Classes;
 
 
@@ -101,6 +100,8 @@ namespace SmartTicketingSystem.UserControls
             // typecasting selected item to Category to fetch id
             var selectedCategory = (Category)comboTicketCategory.SelectedItem;
             ticket.category = selectedCategory.id;
+
+            ticket.ticketName = txtTicketName.Text;
 
             tickets.Add(ticket);
             MessageBox.Show("ADDED TICKET SUCCESSFULLY");
