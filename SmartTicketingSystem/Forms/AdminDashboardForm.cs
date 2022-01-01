@@ -88,8 +88,8 @@ namespace SmartTicketingSystem.Forms
         private void btnAdminTickets_Click(object sender, EventArgs e)
         {
             moveSidePanel(btnAdminTickets);
-            CreateTicketUC tcuc = new CreateTicketUC();
-            AddControlsToPanel(tcuc);
+            TicketHandlingUC ticketHandlingUC = new TicketHandlingUC();
+            AddControlsToPanel(ticketHandlingUC);
         }
 
         private void btnAdminStaffs_Click(object sender, EventArgs e)

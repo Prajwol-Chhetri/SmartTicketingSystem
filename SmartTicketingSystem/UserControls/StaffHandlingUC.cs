@@ -15,8 +15,6 @@ namespace SmartTicketingSystem.UserControls
         public StaffHandlingUC()
         {
             InitializeComponent();
-            panelControl.Controls.Add(btnDeRegisterStaff);
-            panelControl.Controls.Add(btnRegisterStaff);
         }
 
         private void AddControlsToPanel(Control c)
@@ -25,7 +23,6 @@ namespace SmartTicketingSystem.UserControls
             panelControl.Controls.Clear();
             panelControl.Controls.Add(c);
         }
-
 
         private void btnRegisterStaff_Click(object sender, EventArgs e)
         {
