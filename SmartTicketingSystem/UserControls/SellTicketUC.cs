@@ -11,9 +11,10 @@ using System.Xml.Serialization;
 using System.IO;
 using SmartTicketingSystem.Classes;
 
+
 namespace SmartTicketingSystem.UserControls
 {
-    public partial class SellTicket : UserControl
+    public partial class SellTicketUC : UserControl
     {
         XmlSerializer xmlSerializer;
         XmlSerializer xmlTicketSerializer;
@@ -24,7 +25,7 @@ namespace SmartTicketingSystem.UserControls
         List<Timing> timings;
         List<Category> categories;
 
-        public SellTicket()
+        public SellTicketUC()
         {
             InitializeComponent();
             ticketSales = new List<TicketSale>();
@@ -50,22 +51,16 @@ namespace SmartTicketingSystem.UserControls
 
                 // loading data from timings xml file to display in combobox
                 string timingXMLPath = "D:/work/year 3/Coursework/Application Dev/SmartTicketingSystem/Timings.xml";
-                if (File.Exists(timingXMLPath))
-                {
-                    FileStream existingTimingsFS = new FileStream(timingXMLPath, FileMode.Open, FileAccess.Read);
-                    timings = (List<Timing>)xmlTimingSerializer.Deserialize(existingTimingsFS);
-                    existingTimingsFS.Close();
-                }
+                FileStream existingTimingsFS = new FileStream(timingXMLPath, FileMode.Open, FileAccess.Read);
+                timings = (List<Timing>)xmlTimingSerializer.Deserialize(existingTimingsFS);
+                existingTimingsFS.Close();
 
 
                 // loading data from categories xml file to display in combobox
                 string categoryXMLPath = "D:/work/year 3/Coursework/Application Dev/SmartTicketingSystem/Categories.xml";
-                if (File.Exists(categoryXMLPath))
-                {
-                    FileStream existingCategoriesFS = new FileStream(categoryXMLPath, FileMode.Open, FileAccess.Read);
-                    categories = (List<Category>)xmlCategorySerializer.Deserialize(existingCategoriesFS);
-                    existingCategoriesFS.Close();
-                }
+                FileStream existingCategoriesFS = new FileStream(categoryXMLPath, FileMode.Open, FileAccess.Read);
+                categories = (List<Category>)xmlCategorySerializer.Deserialize(existingCategoriesFS);
+                existingCategoriesFS.Close();
             }
             else
             {
@@ -100,78 +95,45 @@ namespace SmartTicketingSystem.UserControls
             // typecasting selected item to Ticket to fetch selected ticket
             var selectedTicket = (Ticket)comboTicket.SelectedItem;
 
-            // fetching selected time from ticket
+            // fetching time from selected ticket
             var selectedTicketTiming = timings.SingleOrDefault(x => x.id == selectedTicket.timing);
 
-            // fetching selected category from ticket
+            // fetching category from selected ticket
             var selectedTicketCategory = categories.SingleOrDefault(y => y.id == selectedTicket.category);
 
-            // creating new ticketSale object of Ticket Sale class
-            TicketSale ticketSale = new TicketSale();
-            ticketSale.id = Guid.NewGuid();
-            ticketSale.ticket = selectedTicket.id;
 
             // assigning check in and check out time
             DateTime currentTime = DateTime.Now;
             DateTime checkOut = currentTime.AddHours(selectedTicketTiming.noOfHours);
+
+            // start and end time of recreation center
             TimeSpan start = new TimeSpan(10, 0, 0);
             TimeSpan end = new TimeSpan(18, 0, 0);
 
-            ticketSale.checkInTime = currentTime.ToString("h:mm:ss tt");
-            ticketSale.checkOutTime = checkOut.ToString("h:mm:ss tt");
-            ticketSale.soldDate = DateTime.Today;
-
-
-            if (checkOut.TimeOfDay >  start && checkOut.TimeOfDay < end)
+            if (checkOut.TimeOfDay > start && checkOut.TimeOfDay < end)
             {
+                // creating new ticketSale object of Ticket Sale class
+                TicketSale ticketSale = new TicketSale();
+                ticketSale.id = Guid.NewGuid();
+                ticketSale.ticket = selectedTicket.id;
+                ticketSale.checkInTime = currentTime.ToString("h:mm:ss tt");
+                ticketSale.checkOutTime = checkOut.ToString("h:mm:ss tt");
+                ticketSale.soldDate = DateTime.Today;
+
                 // adding ticket Sale obj to list of ticket sale object
                 ticketSales.Add(ticketSale);
                 MessageBox.Show("SOLD TICKET SUCCESSFULLY");
             }
             else
             {
-                MessageBox.Show("PARK CLOSED");
+                MessageBox.Show("CANNOT SELL THIS TICKET");
             }
-
 
             // serializing Ticket Sales object to XMl file and closing it
             xmlSerializer.Serialize(fileStream, ticketSales);
             fileStream.Close();
-        }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboTicket_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCheckInTime_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCheckOutTime_TextChanged(object sender, EventArgs e)
-        {
-
+            LoadData(ticketSales);
         }
     }
 }

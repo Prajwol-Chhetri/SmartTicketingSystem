@@ -7,4 +7,25 @@
     <checkOutTime>2:20:10 AM</checkOutTime>
     <soldDate>2022-01-02T00:00:00+05:45</soldDate>
   </TicketSale>
+  <TicketSale>
+    <id>f48ab823-e21f-4639-adfb-e73db8492f1f</id>
+    <ticket>96f9b95d-9a9b-4e18-a2a3-34b68427b9ca</ticket>
+    <checkInTime>10:46:38 AM</checkInTime>
+    <checkOutTime>11:46:38 AM</checkOutTime>
+    <soldDate>2022-01-02T00:00:00+05:45</soldDate>
+  </TicketSale>
+  <TicketSale>
+    <id>d7e3feb4-dfe1-4ad5-8207-0fa738168bc4</id>
+    <ticket>4a0d9a27-e3a5-4203-bfbc-a941d8ddb9f2</ticket>
+    <checkInTime>10:57:44 AM</checkInTime>
+    <checkOutTime>11:57:44 AM</checkOutTime>
+    <soldDate>2022-01-02T00:00:00+05:45</soldDate>
+  </TicketSale>
+  <TicketSale>
+    <id>ad720296-96b0-4e49-8bf6-a27a44ccb61e</id>
+    <ticket>96f9b95d-9a9b-4e18-a2a3-34b68427b9ca</ticket>
+    <checkInTime>11:24:51 AM</checkInTime>
+    <checkOutTime>12:24:51 PM</checkOutTime>
+    <soldDate>2022-01-02T00:00:00+05:45</soldDate>
+  </TicketSale>
 </ArrayOfTicketSale>

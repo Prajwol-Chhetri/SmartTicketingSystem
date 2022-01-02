@@ -146,11 +146,11 @@
     <Compile Include="UserControls\RegistrationUC.Designer.cs">
       <DependentUpon>RegistrationUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\SellTicket.cs">
+    <Compile Include="UserControls\SellTicketUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\SellTicket.Designer.cs">
-      <DependentUpon>SellTicket.cs</DependentUpon>
+    <Compile Include="UserControls\SellTicketUC.Designer.cs">
+      <DependentUpon>SellTicketUC.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\StaffHandlingUC.cs">
       <SubType>UserControl</SubType>
@@ -212,8 +212,8 @@
     <EmbeddedResource Include="UserControls\RegistrationUC.resx">
       <DependentUpon>RegistrationUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\SellTicket.resx">
-      <DependentUpon>SellTicket.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\SellTicketUC.resx">
+      <DependentUpon>SellTicketUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\StaffHandlingUC.resx">
       <DependentUpon>StaffHandlingUC.cs</DependentUpon>

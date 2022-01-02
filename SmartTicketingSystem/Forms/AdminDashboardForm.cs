@@ -127,7 +127,7 @@ namespace SmartTicketingSystem.Forms
         private void btnSellTicket_Click(object sender, EventArgs e)
         {
             moveSidePanel(btnSellTicket);
-            SellTicket sellTicketUC = new SellTicket();
+            SellTicketUC sellTicketUC = new SellTicketUC();
             AddControlsToPanel(sellTicketUC);
         }
     }
