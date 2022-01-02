@@ -11,7 +11,7 @@ namespace SmartTicketingSystem.Classes
     {
         public Guid id { get; set; }
 
-        public float ticketRate { get; set; }
+        public decimal ticketRate { get; set; }
 
         public Guid timing { get; set; }
 

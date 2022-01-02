@@ -101,7 +101,7 @@ namespace SmartTicketingSystem.UserControls
             Ticket ticket = new Ticket();
 
             ticket.id = Guid.NewGuid();
-            ticket.ticketRate = Convert.ToInt32(txtRate.Text);
+            ticket.ticketRate = Convert.ToDecimal(txtRate.Text);
 
             // typecasting selected item to Timing to fetch id
             var selectedTiming = (Timing)comboTicketTime.SelectedItem;

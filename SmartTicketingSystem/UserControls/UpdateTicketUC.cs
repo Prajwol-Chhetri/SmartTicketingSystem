@@ -109,7 +109,7 @@ namespace SmartTicketingSystem.UserControls
 
 
                 // updating ticket from new data
-                ticketToUpdate.ticketRate = Convert.ToInt32(txtRate.Text);      
+                ticketToUpdate.ticketRate = Convert.ToDecimal(txtRate.Text);      
                 var selectedTiming = (Timing)comboTicketTime.SelectedItem; // typecasting selected item to Timing to fetch id
                 ticketToUpdate.timing = selectedTiming.id;
                 var selectedCategory = (Category)comboTicketCategory.SelectedItem; // typecasting selected item to Category to fetch id
