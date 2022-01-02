@@ -41,11 +41,6 @@ namespace SmartTicketingSystem.Forms
 
         private void btnRegisterAdmin_Click(object sender, EventArgs e)
         {
-            if (ValidateChildren(ValidationConstraints.Enabled))
-            {
-                MessageBox.Show("Demo App - Message!");
-            }
-
             // regex to check for email valid
             string pattern = @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$";
             Regex rg = new Regex(pattern);
