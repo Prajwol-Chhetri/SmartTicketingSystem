@@ -39,7 +39,7 @@ namespace SmartTicketingSystem.UserControls
             xmlCategorySerializer = new XmlSerializer(typeof(List<Category>));
 
             // loading data from tickets xml file to display in combobox
-            string ticketsXMLPath = "D:/work/year 3/Coursework/Application Dev/SmartTicketingSystem/Tickets.xml";
+            string ticketsXMLPath = Path.Combine(Directory.GetCurrentDirectory(), "Tickets.xml");
             if (File.Exists(ticketsXMLPath))
             {
                 FileStream existingTicketsFS = new FileStream(ticketsXMLPath, FileMode.Open, FileAccess.Read);
@@ -51,14 +51,14 @@ namespace SmartTicketingSystem.UserControls
                 comboTicket.DisplayMember = "ticketName";
 
                 // loading data from timings xml file to display in combobox
-                string timingXMLPath = "D:/work/year 3/Coursework/Application Dev/SmartTicketingSystem/Timings.xml";
+                string timingXMLPath = Path.Combine(Directory.GetCurrentDirectory(), "Timings.xml");
                 FileStream existingTimingsFS = new FileStream(timingXMLPath, FileMode.Open, FileAccess.Read);
                 timings = (List<Timing>)xmlTimingSerializer.Deserialize(existingTimingsFS);
                 existingTimingsFS.Close();
 
 
                 // loading data from categories xml file to display in combobox
-                string categoryXMLPath = "D:/work/year 3/Coursework/Application Dev/SmartTicketingSystem/Categories.xml";
+                string categoryXMLPath = Path.Combine(Directory.GetCurrentDirectory(), "Categories.xml");
                 FileStream existingCategoriesFS = new FileStream(categoryXMLPath, FileMode.Open, FileAccess.Read);
                 categories = (List<Category>)xmlCategorySerializer.Deserialize(existingCategoriesFS);
                 existingCategoriesFS.Close();
@@ -68,7 +68,7 @@ namespace SmartTicketingSystem.UserControls
                 MessageBox.Show("NO TICKETS PLEASE CREATE A TICKET FIRST");
             }
 
-            string salesXMLPath = "D:/work/year 3/Coursework/Application Dev/SmartTicketingSystem/Sales.xml";
+            string salesXMLPath = Path.Combine(Directory.GetCurrentDirectory(), "Sales.xml");
 
             if (File.Exists(salesXMLPath))
             {
@@ -88,7 +88,7 @@ namespace SmartTicketingSystem.UserControls
 
         private void btnSellTicket_Click(object sender, EventArgs e)
         {
-            string salesXMLPath = "D:/work/year 3/Coursework/Application Dev/SmartTicketingSystem/Sales.xml";
+            string salesXMLPath = Path.Combine(Directory.GetCurrentDirectory(), "Sales.xml");
 
             // overwriting existing xml file
             FileStream fileStream = new FileStream(salesXMLPath, FileMode.Create, FileAccess.Write);

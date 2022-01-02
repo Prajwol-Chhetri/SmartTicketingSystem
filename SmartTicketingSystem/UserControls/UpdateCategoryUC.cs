@@ -25,7 +25,7 @@ namespace SmartTicketingSystem.UserControls
             xmlSerializer = new XmlSerializer(typeof(List<Category>));
 
             // path of categories xml file
-            String path = "D:/work/year 3/Coursework/Application Dev/SmartTicketingSystem/Categories.xml";
+            String path = Path.Combine(Directory.GetCurrentDirectory(), "Categories.xml");
 
             // if file exists loading categories from xml file
             if (File.Exists(path))
@@ -48,7 +48,7 @@ namespace SmartTicketingSystem.UserControls
         {
             if (categories.Count > 0)
             {
-                String path = "D:/work/year 3/Coursework/Application Dev/SmartTicketingSystem/Categories.xml";
+                String path = Path.Combine(Directory.GetCurrentDirectory(), "Categories.xml");
 
                 // overwriting existing xml file
                 FileStream fileStream = new FileStream(path, FileMode.Create, FileAccess.Write);

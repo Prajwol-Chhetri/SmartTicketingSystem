@@ -35,7 +35,7 @@ namespace SmartTicketingSystem
         private void button1_Click(object sender, EventArgs e)
         {
             // path to xml file for user authentication
-            String path = "D:/work/year 3/Coursework/Application Dev/SmartTicketingSystem/Users.xml";
+            String path = Path.Combine(Directory.GetCurrentDirectory(), "Users.xml");
 
 
             // checking if xml file exists for authentication

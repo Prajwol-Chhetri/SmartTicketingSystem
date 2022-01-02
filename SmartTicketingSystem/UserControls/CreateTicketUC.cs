@@ -35,7 +35,7 @@ namespace SmartTicketingSystem.UserControls
 
 
             // loading data from timings xml file to display in combobox
-            string timingXMLPath = "D:/work/year 3/Coursework/Application Dev/SmartTicketingSystem/Timings.xml";
+            string timingXMLPath = Path.Combine(Directory.GetCurrentDirectory(), "Timings.xml");
             if (File.Exists(timingXMLPath))
             {
                 FileStream existingTimingsFS = new FileStream(timingXMLPath, FileMode.Open, FileAccess.Read);
@@ -53,7 +53,7 @@ namespace SmartTicketingSystem.UserControls
 
 
             // loading data from categories xml file to display in combobox
-            string categoryXMLPath = "D:/work/year 3/Coursework/Application Dev/SmartTicketingSystem/Categories.xml";
+            string categoryXMLPath = Path.Combine(Directory.GetCurrentDirectory(), "Categories.xml");
             if (File.Exists(categoryXMLPath))
             {
                 FileStream existingCategoriesFS = new FileStream(categoryXMLPath, FileMode.Open, FileAccess.Read);
@@ -70,7 +70,7 @@ namespace SmartTicketingSystem.UserControls
             }
 
             // path of tickets xml file
-            String path = "D:/work/year 3/Coursework/Application Dev/SmartTicketingSystem/Tickets.xml";
+            String path = Path.Combine(Directory.GetCurrentDirectory(), "Tickets.xml");
             // if file exists loading tickets from xml file
             if (File.Exists(path))
             {
@@ -92,7 +92,7 @@ namespace SmartTicketingSystem.UserControls
         private void btnCreateTicket_Click(object sender, EventArgs e)
         {
             // path of tickets xml file
-            String path = "D:/work/year 3/Coursework/Application Dev/SmartTicketingSystem/Tickets.xml";
+            String path = Path.Combine(Directory.GetCurrentDirectory(), "Tickets.xml");
 
             // overwriting existing xml file
             FileStream fileStream = new FileStream(path, FileMode.Create, FileAccess.Write);

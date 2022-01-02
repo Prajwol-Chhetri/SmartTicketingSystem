@@ -26,7 +26,7 @@ namespace SmartTicketingSystem.UserControls
             xmlSerializer = new XmlSerializer(typeof(List<Timing>));
 
             // path of timings xml file
-            String path = "D:/work/year 3/Coursework/Application Dev/SmartTicketingSystem/Timings.xml";
+            String path = Path.Combine(Directory.GetCurrentDirectory(), "Timings.xml");
 
             // if file exists loading timings from xml file
             if (File.Exists(path))
@@ -48,7 +48,7 @@ namespace SmartTicketingSystem.UserControls
         private void btnCreateTiming_Click(object sender, EventArgs e)
         {
             // path of timings xml file
-            String path = "D:/work/year 3/Coursework/Application Dev/SmartTicketingSystem/Timings.xml";
+            String path = Path.Combine(Directory.GetCurrentDirectory(), "Timings.xml");
 
             // overwriting existing xml file
             FileStream fileStream = new FileStream(path, FileMode.Create, FileAccess.Write);

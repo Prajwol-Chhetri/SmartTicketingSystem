@@ -26,7 +26,7 @@ namespace SmartTicketingSystem.UserControls
             xmlSerializer = new XmlSerializer(typeof(List<Category>));
 
             // loading data from categories xml file to display in combobox
-            String categoriesPath = "D:/work/year 3/Coursework/Application Dev/SmartTicketingSystem/Categories.xml";
+            String categoriesPath = Path.Combine(Directory.GetCurrentDirectory(), "Categories.xml");
             if (File.Exists(categoriesPath))
             {
                 FileStream existingCategoriesFS = new FileStream(categoriesPath, FileMode.Open, FileAccess.Read);
@@ -56,7 +56,7 @@ namespace SmartTicketingSystem.UserControls
         {
             if (categories.Count > 0)
             {
-                string path = "D:/work/year 3/Coursework/Application Dev/SmartTicketingSystem/Categories.xml";
+                string path = Path.Combine(Directory.GetCurrentDirectory(), "Categories.xml");
 
                 // overwriting existing xml file
                 FileStream fileStream = new FileStream(path, FileMode.Create, FileAccess.Write);

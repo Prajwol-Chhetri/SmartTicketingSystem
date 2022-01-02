@@ -25,7 +25,7 @@ namespace SmartTicketingSystem.UserControls
             xmlSerializer = new XmlSerializer(typeof(List<TicketSale>));
 
             // loading data from ticket sales xml file
-            string salesXMLPath = "D:/work/year 3/Coursework/Application Dev/SmartTicketingSystem/Sales.xml";
+            string salesXMLPath = Path.Combine(Directory.GetCurrentDirectory(), "Sales.xml");
             if (File.Exists(salesXMLPath))
             {
                 FileStream existingTicketSalesFS = new FileStream(salesXMLPath, FileMode.Open, FileAccess.Read);

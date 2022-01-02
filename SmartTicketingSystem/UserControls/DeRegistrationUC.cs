@@ -27,7 +27,7 @@ namespace SmartTicketingSystem.UserControls
             xmlSerializer = new XmlSerializer(typeof(List<User>));
 
             // path of users xml file
-            String path = "D:/work/year 3/Coursework/Application Dev/SmartTicketingSystem/Users.xml";
+            String path = Path.Combine(Directory.GetCurrentDirectory(), "Users.xml");
 
             // loading users from xml file
             FileStream existingUsersFS = new FileStream(path, FileMode.Open, FileAccess.Read);
@@ -47,7 +47,7 @@ namespace SmartTicketingSystem.UserControls
         private void btnRemoveStaff_Click(object sender, EventArgs e)
         {
             // path of users xml file
-            String path = "D:/work/year 3/Coursework/Application Dev/SmartTicketingSystem/Users.xml";
+            String path = Path.Combine(Directory.GetCurrentDirectory(), "Users.xml");
 
             // overwriting existing xml file
             FileStream fileStream = new FileStream(path, FileMode.Create, FileAccess.Write);

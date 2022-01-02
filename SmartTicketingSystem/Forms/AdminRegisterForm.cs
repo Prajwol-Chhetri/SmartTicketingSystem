@@ -51,7 +51,7 @@ namespace SmartTicketingSystem.Forms
             Regex rg = new Regex(pattern);
 
             // path of users xml file
-            String path = "D:/work/year 3/Coursework/Application Dev/SmartTicketingSystem/Users.xml";
+            String path = Path.Combine(Directory.GetCurrentDirectory(), "Users.xml");
 
             // if file exists loading users from xml file
             if (File.Exists(path))

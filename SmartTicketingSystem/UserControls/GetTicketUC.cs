@@ -29,7 +29,7 @@ namespace SmartTicketingSystem.UserControls
         private void btnGetTicket_Click(object sender, EventArgs e)
         {
             // loading data from sales xml
-            string salesXMLPath = "D:/work/year 3/Coursework/Application Dev/SmartTicketingSystem/Sales.xml";
+            string salesXMLPath = Path.Combine(Directory.GetCurrentDirectory(), "Sales.xml");
 
             if (File.Exists(salesXMLPath))
             {
