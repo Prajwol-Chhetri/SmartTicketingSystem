@@ -120,7 +120,7 @@ namespace SmartTicketingSystem.UserControls
             // 
             // usersBindingSource
             // 
-            this.usersBindingSource.DataSource = typeof(SmartTicketingSystem.Classes.Users);
+            this.usersBindingSource.DataSource = typeof(SmartTicketingSystem.Classes.User);
             // 
             // firstNameDataGridViewTextBoxColumn
             // 

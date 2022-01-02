@@ -18,13 +18,13 @@ namespace SmartTicketingSystem.Forms
     public partial class AdminRegisterForm : Form
     {
         XmlSerializer xmlSerializer;
-        List<Users> users;
+        List<User> users;
 
         public AdminRegisterForm()
         {
             InitializeComponent();
-            users = new List<Users>();
-            xmlSerializer = new XmlSerializer(typeof(List<Users>));
+            users = new List<User>();
+            xmlSerializer = new XmlSerializer(typeof(List<User>));
         }
 
 
@@ -52,7 +52,7 @@ namespace SmartTicketingSystem.Forms
             if (File.Exists(path))
             {
                 FileStream existingUsersFS = new FileStream(path, FileMode.Open, FileAccess.Read);
-                users = (List<Users>)xmlSerializer.Deserialize(existingUsersFS);
+                users = (List<User>)xmlSerializer.Deserialize(existingUsersFS);
                 existingUsersFS.Close();
             }
 
@@ -60,7 +60,7 @@ namespace SmartTicketingSystem.Forms
             FileStream fileStream = new FileStream(path, FileMode.Create, FileAccess.Write);
 
             // creating new user object of User class
-            Users user = new Users();
+            User user = new User();
 
 
             if (users.Any(admin => admin.Role == RoleType.Admin))

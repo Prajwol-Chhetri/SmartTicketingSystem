@@ -74,8 +74,8 @@ namespace SmartTicketingSystem.UserControls
         {
             // getting details of currently selected ticket
             var selectedTicket = (Ticket)comboTicketName.SelectedItem;
-            var selectedTicketTiming = timings.SingleOrDefault(x => x.id == selectedTicket.timing);
-            var selectedTicketCategory = categories.SingleOrDefault(y => y.id == selectedTicket.category);
+            var selectedTicketTiming = timings.SingleOrDefault(x => x.ID == selectedTicket.Timing);
+            var selectedTicketCategory = categories.SingleOrDefault(y => y.ID == selectedTicket.Category);
 
             // loading data into timing combobox by binding timings list as datasource
             comboTicketTime.DataSource = timings;
@@ -86,10 +86,10 @@ namespace SmartTicketingSystem.UserControls
             comboTicketCategory.DisplayMember = "categoryName";
 
             // setting the details of currently selected ticket in the update fields
-            txtTicketName.Text = selectedTicket.ticketName;
-            comboTicketTime.SelectedIndex = comboTicketTime.FindStringExact(selectedTicketTiming.timingName);
-            comboTicketCategory.SelectedIndex = comboTicketCategory.FindStringExact(selectedTicketCategory.categoryName);
-            txtRate.Text = Convert.ToString(selectedTicket.ticketRate);
+            txtTicketName.Text = selectedTicket.TicketName;
+            comboTicketTime.SelectedIndex = comboTicketTime.FindStringExact(selectedTicketTiming.TimingName);
+            comboTicketCategory.SelectedIndex = comboTicketCategory.FindStringExact(selectedTicketCategory.CategoryName);
+            txtRate.Text = Convert.ToString(selectedTicket.TicketRate);
         }
 
         private void btnUpdateTicket_Click(object sender, EventArgs e)
@@ -105,16 +105,16 @@ namespace SmartTicketingSystem.UserControls
                 var selectedTicket = (Ticket)comboTicketName.SelectedItem;
                 
                 // finding ticket in tickets list
-                var ticketToUpdate = tickets.Find(x => x.id == selectedTicket.id);
+                var ticketToUpdate = tickets.Find(x => x.ID == selectedTicket.ID);
 
 
                 // updating ticket from new data
-                ticketToUpdate.ticketRate = Convert.ToDecimal(txtRate.Text);      
+                ticketToUpdate.TicketRate = Convert.ToDecimal(txtRate.Text);      
                 var selectedTiming = (Timing)comboTicketTime.SelectedItem; // typecasting selected item to Timing to fetch id
-                ticketToUpdate.timing = selectedTiming.id;
+                ticketToUpdate.Timing = selectedTiming.ID;
                 var selectedCategory = (Category)comboTicketCategory.SelectedItem; // typecasting selected item to Category to fetch id
-                ticketToUpdate.category = selectedCategory.id;
-                ticketToUpdate.ticketName = txtTicketName.Text;
+                ticketToUpdate.Category = selectedCategory.ID;
+                ticketToUpdate.TicketName = txtTicketName.Text;
 
                 // serializing tickets object to XMl file and closing it
                 xmlSerializer.Serialize(fileStream, tickets);

@@ -58,9 +58,9 @@ namespace SmartTicketingSystem.UserControls
             // creating new category object of Category class
             Category category = new Category();
 
-            category.id = Guid.NewGuid();
-            category.noOfPeople = Convert.ToInt32(txtNoOfPeople.Text);
-            category.categoryName = txtCategoryName.Text;
+            category.ID = Guid.NewGuid();
+            category.NoOfPeople = Convert.ToInt32(txtNoOfPeople.Text);
+            category.CategoryName = txtCategoryName.Text;
             categories.Add(category);
 
             // serializing categories object to XMl file and closing it

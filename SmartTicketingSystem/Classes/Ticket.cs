@@ -9,14 +9,14 @@ namespace SmartTicketingSystem.Classes
 
     public class Ticket
     {
-        public Guid id { get; set; }
+        public Guid ID { get; set; }
 
-        public decimal ticketRate { get; set; }
+        public decimal TicketRate { get; set; }
 
-        public Guid timing { get; set; }
+        public Guid Timing { get; set; }
 
-        public Guid category { get; set; }
+        public Guid Category { get; set; }
 
-        public string ticketName { get; set; }
+        public string TicketName { get; set; }
     }
 }

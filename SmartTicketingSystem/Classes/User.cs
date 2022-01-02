@@ -13,7 +13,7 @@ namespace SmartTicketingSystem.Classes
         Staff
     }
 
-    public class Users
+    public class User
     {
         public string FirstName { get; set; }
 

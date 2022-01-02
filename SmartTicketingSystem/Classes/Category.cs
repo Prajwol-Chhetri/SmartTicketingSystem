@@ -8,10 +8,10 @@ namespace SmartTicketingSystem.Classes
 {
     public class Category
     {
-        public Guid id { get; set; }
+        public Guid ID { get; set; }
 
-        public int noOfPeople { get; set; }
+        public int NoOfPeople { get; set; }
 
-        public string categoryName { get; set; }
+        public string CategoryName { get; set; }
     }
 }

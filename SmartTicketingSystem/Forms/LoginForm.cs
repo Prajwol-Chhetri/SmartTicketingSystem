@@ -18,13 +18,13 @@ namespace SmartTicketingSystem
     public partial class LoginForm : Form
     {
         XmlSerializer xmlSerializer;
-        List<Users> users;
+        List<User> users;
 
         public LoginForm()
         {
             InitializeComponent();
-            users = new List<Users>();
-            xmlSerializer = new XmlSerializer(typeof(List<Users>));
+            users = new List<User>();
+            xmlSerializer = new XmlSerializer(typeof(List<User>));
         }
 
         private void shutDownButton_Click(object sender, EventArgs e)
@@ -43,7 +43,7 @@ namespace SmartTicketingSystem
             {
                 // deserializing xml file and fetching all user details for authentication
                 FileStream fileStream = new FileStream(path, FileMode.Open, FileAccess.Read);
-                users = (List<Users>)xmlSerializer.Deserialize(fileStream);
+                users = (List<User>)xmlSerializer.Deserialize(fileStream);
 
                 // setting authenticated to false by default
                 bool authenticated = false;

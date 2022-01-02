@@ -18,27 +18,27 @@ namespace SmartTicketingSystem.UserControls
     public partial class DeRegistrationUC : UserControl
     {
         XmlSerializer xmlSerializer;
-        List<Users> users;
+        List<User> users;
 
         public DeRegistrationUC()
         {
             InitializeComponent();
-            users = new List<Users>();
-            xmlSerializer = new XmlSerializer(typeof(List<Users>));
+            users = new List<User>();
+            xmlSerializer = new XmlSerializer(typeof(List<User>));
 
             // path of users xml file
             String path = "D:/work/year 3/Coursework/Application Dev/SmartTicketingSystem/Users.xml";
 
             // loading users from xml file
             FileStream existingUsersFS = new FileStream(path, FileMode.Open, FileAccess.Read);
-            users = (List<Users>)xmlSerializer.Deserialize(existingUsersFS);
+            users = (List<User>)xmlSerializer.Deserialize(existingUsersFS);
             existingUsersFS.Close();
 
             // loading users data in grid view
             LoadData(users);
         }
 
-        public void LoadData(List<Users> x)
+        public void LoadData(List<User> x)
         {
             categoryDataView.DataSource = null;
             categoryDataView.DataSource = x;

@@ -8,10 +8,10 @@ namespace SmartTicketingSystem.Classes
 {
     public class Timing
     {
-        public Guid id { get; set; }
+        public Guid ID { get; set; }
 
-        public int noOfHours { get; set; }
+        public int NoOfHours { get; set; }
 
-        public string timingName { get; set; }
+        public string TimingName { get; set; }
     }
 }

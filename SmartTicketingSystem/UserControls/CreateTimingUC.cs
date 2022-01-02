@@ -56,9 +56,9 @@ namespace SmartTicketingSystem.UserControls
             // creating new category object of Category class
             Timing timing = new Timing();
 
-            timing.id = Guid.NewGuid();
-            timing.noOfHours = Convert.ToInt32(txtNoOfHours.Text);
-            timing.timingName = txtTimingName.Text;
+            timing.ID = Guid.NewGuid();
+            timing.NoOfHours = Convert.ToInt32(txtNoOfHours.Text);
+            timing.TimingName = txtTimingName.Text;
             timings.Add(timing);
 
             // serializing categories object to XMl file and closing it

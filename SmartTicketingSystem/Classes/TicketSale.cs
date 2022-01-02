@@ -8,14 +8,14 @@ namespace SmartTicketingSystem.Classes
 {
     public class TicketSale
     {
-        public Guid id { get; set; }
+        public Guid ID { get; set; }
 
-        public Guid ticket { get; set; }
+        public Guid Ticket { get; set; }
 
-        public string checkInTime { get; set; }
+        public string EntryTime { get; set; }
 
-        public string checkOutTime { get; set; }
+        public string ExitTime { get; set; }
 
-        public DateTime soldDate { get; set; }
+        public DateTime SoldDate { get; set; }
     }
 }

@@ -77,7 +77,7 @@
     <Compile Include="Classes\Ticket.cs" />
     <Compile Include="Classes\TicketSale.cs" />
     <Compile Include="Classes\Timing.cs" />
-    <Compile Include="Classes\Users.cs" />
+    <Compile Include="Classes\User.cs" />
     <Compile Include="Forms\AdminRegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>

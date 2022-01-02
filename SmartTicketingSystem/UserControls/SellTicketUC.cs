@@ -96,15 +96,15 @@ namespace SmartTicketingSystem.UserControls
             var selectedTicket = (Ticket)comboTicket.SelectedItem;
 
             // fetching time from selected ticket
-            var selectedTicketTiming = timings.SingleOrDefault(x => x.id == selectedTicket.timing);
+            var selectedTicketTiming = timings.SingleOrDefault(x => x.ID == selectedTicket.Timing);
 
             // fetching category from selected ticket
-            var selectedTicketCategory = categories.SingleOrDefault(y => y.id == selectedTicket.category);
+            var selectedTicketCategory = categories.SingleOrDefault(y => y.ID == selectedTicket.Category);
 
 
             // assigning check in and check out time
             DateTime currentTime = DateTime.Now;
-            DateTime checkOut = currentTime.AddHours(selectedTicketTiming.noOfHours);
+            DateTime checkOut = currentTime.AddHours(selectedTicketTiming.NoOfHours);
 
             // start and end time of recreation center
             TimeSpan start = new TimeSpan(10, 0, 0);
@@ -114,11 +114,11 @@ namespace SmartTicketingSystem.UserControls
             {
                 // creating new ticketSale object of Ticket Sale class
                 TicketSale ticketSale = new TicketSale();
-                ticketSale.id = Guid.NewGuid();
-                ticketSale.ticket = selectedTicket.id;
-                ticketSale.checkInTime = currentTime.ToString("h:mm:ss tt");
-                ticketSale.checkOutTime = checkOut.ToString("h:mm:ss tt");
-                ticketSale.soldDate = DateTime.Today;
+                ticketSale.ID = Guid.NewGuid();
+                ticketSale.Ticket = selectedTicket.ID;
+                ticketSale.EntryTime = currentTime.ToString("h:mm:ss tt");
+                ticketSale.ExitTime = checkOut.ToString("h:mm:ss tt");
+                ticketSale.SoldDate = DateTime.Today;
 
                 // adding ticket Sale obj to list of ticket sale object
                 ticketSales.Add(ticketSale);

@@ -64,7 +64,7 @@ namespace SmartTicketingSystem.UserControls
                 var selectedTicket = (Ticket)comboTicketName.SelectedItem;
 
                 // fetching ticket from list of tickets
-                var ticket = tickets.SingleOrDefault(x => x.id == selectedTicket.id);
+                var ticket = tickets.SingleOrDefault(x => x.ID == selectedTicket.ID);
                 if (ticket != null)
                 {
                     // removing ticket if ticket is found

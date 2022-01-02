@@ -100,18 +100,18 @@ namespace SmartTicketingSystem.UserControls
             // creating new user object of User class
             Ticket ticket = new Ticket();
 
-            ticket.id = Guid.NewGuid();
-            ticket.ticketRate = Convert.ToDecimal(txtRate.Text);
+            ticket.ID = Guid.NewGuid();
+            ticket.TicketRate = Convert.ToDecimal(txtRate.Text);
 
             // typecasting selected item to Timing to fetch id
             var selectedTiming = (Timing)comboTicketTime.SelectedItem;
-            ticket.timing = selectedTiming.id;
+            ticket.Timing = selectedTiming.ID;
 
             // typecasting selected item to Category to fetch id
             var selectedCategory = (Category)comboTicketCategory.SelectedItem;
-            ticket.category = selectedCategory.id;
+            ticket.Category = selectedCategory.ID;
 
-            ticket.ticketName = txtTicketName.Text;
+            ticket.TicketName = txtTicketName.Text;
 
             tickets.Add(ticket);
             MessageBox.Show("ADDED TICKET SUCCESSFULLY");
