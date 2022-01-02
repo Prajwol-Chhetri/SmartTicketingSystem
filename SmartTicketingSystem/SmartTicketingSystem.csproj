@@ -128,23 +128,17 @@
     <Compile Include="UserControls\CreateTimingUC.Designer.cs">
       <DependentUpon>CreateTimingUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\DailyReport.cs">
+    <Compile Include="UserControls\DailyReportUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\DailyReport.Designer.cs">
-      <DependentUpon>DailyReport.cs</DependentUpon>
+    <Compile Include="UserControls\DailyReportUC.Designer.cs">
+      <DependentUpon>DailyReportUC.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\ReportHandlingUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\ReportHandlingUC.Designer.cs">
       <DependentUpon>ReportHandlingUC.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\WeeklyReportUC.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\WeeklyReportUC.Designer.cs">
-      <DependentUpon>WeeklyReportUC.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\DashboardUC.cs">
       <SubType>UserControl</SubType>
@@ -224,6 +218,12 @@
     <Compile Include="UserControls\UpdateTicketUC.Designer.cs">
       <DependentUpon>UpdateTicketUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\WeeklyReportUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\WeeklyReportUC.Designer.cs">
+      <DependentUpon>WeeklyReportUC.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\AdminRegisterForm.resx">
       <DependentUpon>AdminRegisterForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -257,14 +257,11 @@
     <EmbeddedResource Include="UserControls\CreateTimingUC.resx">
       <DependentUpon>CreateTimingUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\DailyReport.resx">
-      <DependentUpon>DailyReport.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\DailyReportUC.resx">
+      <DependentUpon>DailyReportUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ReportHandlingUC.resx">
       <DependentUpon>ReportHandlingUC.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\WeeklyReportUC.resx">
-      <DependentUpon>WeeklyReportUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\DashboardUC.resx">
       <DependentUpon>DashboardUC.cs</DependentUpon>
@@ -304,6 +301,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UpdateTicketUC.resx">
       <DependentUpon>UpdateTicketUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\WeeklyReportUC.resx">
+      <DependentUpon>WeeklyReportUC.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\SmartTicketingSystem.Classes.Category.datasource" />

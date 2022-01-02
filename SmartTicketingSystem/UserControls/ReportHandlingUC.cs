@@ -26,13 +26,14 @@ namespace SmartTicketingSystem.UserControls
 
         private void btnDailyReport_Click_1(object sender, EventArgs e)
         {
-            DailyReport dailyReportUC = new DailyReport();
+            DailyReportUC dailyReportUC = new DailyReportUC();
             AddControlsToPanel(dailyReportUC);
         }
 
         private void btnWeeklyReport_Click(object sender, EventArgs e)
         {
-
+            WeeklyReportUC weeklyReportUC = new WeeklyReportUC();
+            AddControlsToPanel(weeklyReportUC);
         }
     }
 }

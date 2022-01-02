@@ -10,16 +10,15 @@ using System.Windows.Forms;
 using System.Xml.Serialization;
 using System.IO;
 using SmartTicketingSystem.Classes;
-using System.Globalization;
 
 namespace SmartTicketingSystem.UserControls
 {
-    public partial class DailyReport : UserControl
+    public partial class DailyReportUC : UserControl
     {
         XmlSerializer xmlSerializer;
         List<TicketSale> ticketSales;
 
-        public DailyReport()
+        public DailyReportUC()
         {
             InitializeComponent();
             ticketSales = new List<TicketSale>();

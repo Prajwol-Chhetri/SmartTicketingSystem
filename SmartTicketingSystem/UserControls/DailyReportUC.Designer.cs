@@ -1,7 +1,7 @@
 ﻿
 namespace SmartTicketingSystem.UserControls
 {
-    partial class DailyReport
+    partial class DailyReportUC
     {
         /// <summary> 
         /// Required designer variable.
