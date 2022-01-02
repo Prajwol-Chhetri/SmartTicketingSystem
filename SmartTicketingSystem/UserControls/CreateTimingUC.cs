@@ -69,5 +69,37 @@ namespace SmartTicketingSystem.UserControls
 
             LoadData(timings);
         }
+
+        private void btnImport_Click(object sender, EventArgs e)
+        {
+            // show open file dialoag and get the path of the csv file
+            openFileDialog1.ShowDialog();
+            string fileName = openFileDialog1.FileName;
+
+            // read contents of csv as individual lines
+            string[] csvLines = File.ReadAllLines(fileName);
+
+            // Create timings with CSV data
+            var csvTimings = new List<Timing>();
+
+            // split each row into column data
+            for (int i = 1; i < csvLines.Length; i++)
+            {
+                string[] rowdata = csvLines[i].Split(',');
+
+                var timing = new Timing();
+                timing.ID = Guid.NewGuid();
+                timing.NoOfHours = Convert.ToInt32(rowdata[0]);
+                timing.TimingName = rowdata[1];
+
+                csvTimings.Add(timing);
+            }
+
+            // adding timings from csv to existing timings
+            timings.AddRange(csvTimings);
+
+            // loading updated data
+            LoadData(timings);
+        }
     }
 }

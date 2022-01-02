@@ -37,10 +37,12 @@ namespace SmartTicketingSystem.UserControls
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.timingDataView = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timingBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.noOfHoursDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timingNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timingBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnImport = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.timingDataView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.timingBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -124,7 +126,7 @@ namespace SmartTicketingSystem.UserControls
             this.timingDataView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.timingDataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.timingDataView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
+            this.iDDataGridViewTextBoxColumn,
             this.noOfHoursDataGridViewTextBoxColumn,
             this.timingNameDataGridViewTextBoxColumn});
             this.timingDataView.DataSource = this.timingBindingSource;
@@ -137,34 +139,55 @@ namespace SmartTicketingSystem.UserControls
             this.timingDataView.Size = new System.Drawing.Size(984, 208);
             this.timingDataView.TabIndex = 51;
             // 
-            // idDataGridViewTextBoxColumn
+            // timingBindingSource
             // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.timingBindingSource.DataSource = typeof(SmartTicketingSystem.Classes.Timing);
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
             // 
             // noOfHoursDataGridViewTextBoxColumn
             // 
-            this.noOfHoursDataGridViewTextBoxColumn.DataPropertyName = "noOfHours";
-            this.noOfHoursDataGridViewTextBoxColumn.HeaderText = "noOfHours";
+            this.noOfHoursDataGridViewTextBoxColumn.DataPropertyName = "NoOfHours";
+            this.noOfHoursDataGridViewTextBoxColumn.HeaderText = "NoOfHours";
             this.noOfHoursDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.noOfHoursDataGridViewTextBoxColumn.Name = "noOfHoursDataGridViewTextBoxColumn";
             // 
             // timingNameDataGridViewTextBoxColumn
             // 
-            this.timingNameDataGridViewTextBoxColumn.DataPropertyName = "timingName";
-            this.timingNameDataGridViewTextBoxColumn.HeaderText = "timingName";
+            this.timingNameDataGridViewTextBoxColumn.DataPropertyName = "TimingName";
+            this.timingNameDataGridViewTextBoxColumn.HeaderText = "TimingName";
             this.timingNameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.timingNameDataGridViewTextBoxColumn.Name = "timingNameDataGridViewTextBoxColumn";
             // 
-            // timingBindingSource
+            // btnImport
             // 
-            this.timingBindingSource.DataSource = typeof(SmartTicketingSystem.Classes.Timing);
+            this.btnImport.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnImport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.btnImport.FlatAppearance.BorderSize = 0;
+            this.btnImport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImport.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImport.ForeColor = System.Drawing.Color.White;
+            this.btnImport.Location = new System.Drawing.Point(861, 229);
+            this.btnImport.Name = "btnImport";
+            this.btnImport.Size = new System.Drawing.Size(102, 44);
+            this.btnImport.TabIndex = 52;
+            this.btnImport.Text = "Import";
+            this.btnImport.UseVisualStyleBackColor = false;
+            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // CreateTimingUC
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.Controls.Add(this.btnImport);
             this.Controls.Add(this.timingDataView);
             this.Controls.Add(this.txtTimingName);
             this.Controls.Add(this.label3);
@@ -195,5 +218,8 @@ namespace SmartTicketingSystem.UserControls
         private System.Windows.Forms.DataGridViewTextBoxColumn noOfHoursDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn timingNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource timingBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnImport;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
