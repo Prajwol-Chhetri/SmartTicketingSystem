@@ -164,6 +164,18 @@
     <Compile Include="UserControls\TicketHandlingUC.Designer.cs">
       <DependentUpon>TicketHandlingUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\TimingHandlingUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\TimingHandlingUC.Designer.cs">
+      <DependentUpon>TimingHandlingUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UpdateTimingUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UpdateTimingUC.Designer.cs">
+      <DependentUpon>UpdateTimingUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UpdateTicketUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -220,6 +232,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\TicketHandlingUC.resx">
       <DependentUpon>TicketHandlingUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\TimingHandlingUC.resx">
+      <DependentUpon>TimingHandlingUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UpdateTimingUC.resx">
+      <DependentUpon>UpdateTimingUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UpdateTicketUC.resx">
       <DependentUpon>UpdateTicketUC.cs</DependentUpon>

@@ -120,7 +120,7 @@ namespace SmartTicketingSystem.Forms
         private void btnVisitorTimings_Click(object sender, EventArgs e)
         {
             moveSidePanel(btnVisitorTimings);
-            CreateTimingUC timingUC = new CreateTimingUC();
+            TimingHandlingUC timingUC = new TimingHandlingUC();
             AddControlsToPanel(timingUC);
         }
 

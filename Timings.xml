@@ -7,7 +7,7 @@
   </Timing>
   <Timing>
     <ID>dbd51abe-a374-4cd7-9011-44b8eb0f5032</ID>
-    <NoOfHours>24</NoOfHours>
-    <TimingName>whole day</TimingName>
+    <NoOfHours>12</NoOfHours>
+    <TimingName>half day</TimingName>
   </Timing>
 </ArrayOfTiming>

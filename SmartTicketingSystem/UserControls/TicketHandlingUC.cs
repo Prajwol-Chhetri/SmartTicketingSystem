@@ -41,5 +41,10 @@ namespace SmartTicketingSystem.UserControls
             UpdateTicketUC updateUC = new UpdateTicketUC();
             AddControlsToPanel(updateUC);
         }
+
+        private void panelControls_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

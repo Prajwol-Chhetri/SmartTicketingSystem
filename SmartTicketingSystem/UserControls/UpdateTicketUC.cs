@@ -62,7 +62,7 @@ namespace SmartTicketingSystem.UserControls
 
                 // loading data into timing combobox by binding tickets list as datasource
                 comboTicketName.DataSource = tickets;
-                comboTicketName.DisplayMember = "ticketName";
+                comboTicketName.DisplayMember = "TicketName";
             }
             else
             {
