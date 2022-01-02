@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SmartTicketingSystem.UserControls
 {
-    public partial class TimingHandlingUC : UserControl
+    public partial class CategoryHandlingUC : UserControl
     {
-        public TimingHandlingUC()
+        public CategoryHandlingUC()
         {
             InitializeComponent();
         }
@@ -24,26 +24,19 @@ namespace SmartTicketingSystem.UserControls
             panelControls.Controls.Add(c);
         }
 
-
-        private void btnCreateTiming_Click(object sender, EventArgs e)
+        private void btnCreateCategory_Click(object sender, EventArgs e)
         {
-            CreateTimingUC createUC = new CreateTimingUC();
+            CreateCategoryUC createUC = new CreateCategoryUC();
             AddControlsToPanel(createUC);
         }
 
-        private void btnUpdateTiming_Click(object sender, EventArgs e)
+        private void btnUpdateCategory_Click(object sender, EventArgs e)
         {
-            UpdateTimingUC updateUC = new UpdateTimingUC();
+            UpdateCategoryUC updateUC = new UpdateCategoryUC();
             AddControlsToPanel(updateUC);
         }
 
-        private void btnDeleteTiming_Click(object sender, EventArgs e)
-        {
-            DeleteTimingUC deleteUC = new DeleteTimingUC();
-            AddControlsToPanel(deleteUC);
-        }
-
-        private void panelControls_Paint(object sender, PaintEventArgs e)
+        private void btnDeleteCategory_Click(object sender, EventArgs e)
         {
 
         }

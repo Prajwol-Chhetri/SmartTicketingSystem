@@ -49,6 +49,7 @@ namespace SmartTicketingSystem.UserControls
             this.txtTimingName.Name = "txtTimingName";
             this.txtTimingName.Size = new System.Drawing.Size(434, 36);
             this.txtTimingName.TabIndex = 56;
+            this.txtTimingName.TextChanged += new System.EventHandler(this.txtTimingName_TextChanged);
             // 
             // label3
             // 
@@ -60,6 +61,7 @@ namespace SmartTicketingSystem.UserControls
             this.label3.Size = new System.Drawing.Size(140, 23);
             this.label3.TabIndex = 55;
             this.label3.Text = "Timing Name:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // btnUpdateTiming
             // 
@@ -85,6 +87,7 @@ namespace SmartTicketingSystem.UserControls
             this.txtNoOfHours.Name = "txtNoOfHours";
             this.txtNoOfHours.Size = new System.Drawing.Size(434, 36);
             this.txtNoOfHours.TabIndex = 53;
+            this.txtNoOfHours.TextChanged += new System.EventHandler(this.txtNoOfHours_TextChanged);
             // 
             // label2
             // 
@@ -96,6 +99,7 @@ namespace SmartTicketingSystem.UserControls
             this.label2.Size = new System.Drawing.Size(127, 23);
             this.label2.TabIndex = 52;
             this.label2.Text = "No of Hours:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -109,6 +113,7 @@ namespace SmartTicketingSystem.UserControls
             this.label1.TabIndex = 51;
             this.label1.Text = "Enter Timing Details";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label5
             // 
@@ -120,6 +125,7 @@ namespace SmartTicketingSystem.UserControls
             this.label5.Size = new System.Drawing.Size(140, 23);
             this.label5.TabIndex = 59;
             this.label5.Text = "Timing Name:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // comboTimingName
             // 
@@ -143,6 +149,7 @@ namespace SmartTicketingSystem.UserControls
             this.label4.TabIndex = 57;
             this.label4.Text = "Select Timing to Update";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // panel1
             // 
@@ -152,6 +159,7 @@ namespace SmartTicketingSystem.UserControls
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(984, 5);
             this.panel1.TabIndex = 60;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // UpdateTimingUC
             // 

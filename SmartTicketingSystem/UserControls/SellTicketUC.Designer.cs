@@ -374,7 +374,6 @@ namespace SmartTicketingSystem.UserControls
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtCustomerPhone;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn soldDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker ticketDatePicker;
         private System.Windows.Forms.TextBox txtTicketPrice;

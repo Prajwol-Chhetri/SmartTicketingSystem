@@ -46,6 +46,7 @@ namespace SmartTicketingSystem.UserControls
             this.panelControls.Name = "panelControls";
             this.panelControls.Size = new System.Drawing.Size(984, 580);
             this.panelControls.TabIndex = 1;
+            this.panelControls.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControls_Paint);
             // 
             // btnUpdateTiming
             // 

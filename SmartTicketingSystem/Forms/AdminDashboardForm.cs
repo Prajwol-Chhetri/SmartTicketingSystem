@@ -113,7 +113,7 @@ namespace SmartTicketingSystem.Forms
         private void btnVisitorCategories_Click(object sender, EventArgs e)
         {
             moveSidePanel(btnVisitorCategories);
-            CreateCategoryUC categoryUC = new CreateCategoryUC();
+            CategoryHandlingUC categoryUC = new CategoryHandlingUC();
             AddControlsToPanel(categoryUC);
         }
 
