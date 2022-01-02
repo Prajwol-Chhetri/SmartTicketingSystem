@@ -37,10 +37,12 @@ namespace SmartTicketingSystem.UserControls
             this.txtCategoryName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.categoryDataView = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.noOfPeopleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoryNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnImport = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.categoryDataView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -124,7 +126,7 @@ namespace SmartTicketingSystem.UserControls
             this.categoryDataView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.categoryDataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.categoryDataView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
+            this.iDDataGridViewTextBoxColumn,
             this.noOfPeopleDataGridViewTextBoxColumn,
             this.categoryNameDataGridViewTextBoxColumn});
             this.categoryDataView.DataSource = this.categoryBindingSource;
@@ -137,34 +139,55 @@ namespace SmartTicketingSystem.UserControls
             this.categoryDataView.Size = new System.Drawing.Size(984, 208);
             this.categoryDataView.TabIndex = 45;
             // 
-            // idDataGridViewTextBoxColumn
+            // categoryBindingSource
             // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.categoryBindingSource.DataSource = typeof(SmartTicketingSystem.Classes.Category);
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
             // 
             // noOfPeopleDataGridViewTextBoxColumn
             // 
-            this.noOfPeopleDataGridViewTextBoxColumn.DataPropertyName = "noOfPeople";
-            this.noOfPeopleDataGridViewTextBoxColumn.HeaderText = "noOfPeople";
+            this.noOfPeopleDataGridViewTextBoxColumn.DataPropertyName = "NoOfPeople";
+            this.noOfPeopleDataGridViewTextBoxColumn.HeaderText = "NoOfPeople";
             this.noOfPeopleDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.noOfPeopleDataGridViewTextBoxColumn.Name = "noOfPeopleDataGridViewTextBoxColumn";
             // 
             // categoryNameDataGridViewTextBoxColumn
             // 
-            this.categoryNameDataGridViewTextBoxColumn.DataPropertyName = "categoryName";
-            this.categoryNameDataGridViewTextBoxColumn.HeaderText = "categoryName";
+            this.categoryNameDataGridViewTextBoxColumn.DataPropertyName = "CategoryName";
+            this.categoryNameDataGridViewTextBoxColumn.HeaderText = "CategoryName";
             this.categoryNameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.categoryNameDataGridViewTextBoxColumn.Name = "categoryNameDataGridViewTextBoxColumn";
             // 
-            // categoryBindingSource
+            // btnImport
             // 
-            this.categoryBindingSource.DataSource = typeof(SmartTicketingSystem.Classes.Category);
+            this.btnImport.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnImport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.btnImport.FlatAppearance.BorderSize = 0;
+            this.btnImport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImport.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImport.ForeColor = System.Drawing.Color.White;
+            this.btnImport.Location = new System.Drawing.Point(866, 226);
+            this.btnImport.Name = "btnImport";
+            this.btnImport.Size = new System.Drawing.Size(102, 44);
+            this.btnImport.TabIndex = 46;
+            this.btnImport.Text = "Import";
+            this.btnImport.UseVisualStyleBackColor = false;
+            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // CreateCategoryUC
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.Controls.Add(this.btnImport);
             this.Controls.Add(this.categoryDataView);
             this.Controls.Add(this.txtCategoryName);
             this.Controls.Add(this.label3);
@@ -195,5 +218,8 @@ namespace SmartTicketingSystem.UserControls
         private System.Windows.Forms.DataGridViewTextBoxColumn noOfPeopleDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn categoryNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource categoryBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnImport;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

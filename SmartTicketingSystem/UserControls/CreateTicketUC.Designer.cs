@@ -41,12 +41,13 @@ namespace SmartTicketingSystem.UserControls
             this.label5 = new System.Windows.Forms.Label();
             this.txtTicketName = new System.Windows.Forms.TextBox();
             this.ticketDataView = new System.Windows.Forms.DataGridView();
-            this.ticketBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Duration = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ticketRateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Duration = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ticketNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ticketBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ticketDataView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ticketBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -185,9 +186,17 @@ namespace SmartTicketingSystem.UserControls
             this.ticketDataView.Size = new System.Drawing.Size(984, 208);
             this.ticketDataView.TabIndex = 46;
             // 
-            // ticketBindingSource
+            // Duration
             // 
-            this.ticketBindingSource.DataSource = typeof(SmartTicketingSystem.Classes.Ticket);
+            this.Duration.DataPropertyName = "Duration";
+            this.Duration.HeaderText = "Duration";
+            this.Duration.MinimumWidth = 6;
+            this.Duration.Name = "Duration";
+            this.Duration.ReadOnly = true;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -203,14 +212,6 @@ namespace SmartTicketingSystem.UserControls
             this.ticketRateDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.ticketRateDataGridViewTextBoxColumn.Name = "ticketRateDataGridViewTextBoxColumn";
             // 
-            // Duration
-            // 
-            this.Duration.DataPropertyName = "Duration";
-            this.Duration.HeaderText = "Duration";
-            this.Duration.MinimumWidth = 6;
-            this.Duration.Name = "Duration";
-            this.Duration.ReadOnly = true;
-            // 
             // categoryDataGridViewTextBoxColumn
             // 
             this.categoryDataGridViewTextBoxColumn.DataPropertyName = "Category";
@@ -225,6 +226,10 @@ namespace SmartTicketingSystem.UserControls
             this.ticketNameDataGridViewTextBoxColumn.HeaderText = "TicketName";
             this.ticketNameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.ticketNameDataGridViewTextBoxColumn.Name = "ticketNameDataGridViewTextBoxColumn";
+            // 
+            // ticketBindingSource
+            // 
+            this.ticketBindingSource.DataSource = typeof(SmartTicketingSystem.Classes.Ticket);
             // 
             // CreateTicketUC
             // 
@@ -268,5 +273,6 @@ namespace SmartTicketingSystem.UserControls
         private System.Windows.Forms.DataGridViewTextBoxColumn Duration;
         private System.Windows.Forms.DataGridViewTextBoxColumn categoryDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ticketNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
