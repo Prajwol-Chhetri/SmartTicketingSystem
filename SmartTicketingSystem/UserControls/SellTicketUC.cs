@@ -124,7 +124,7 @@ namespace SmartTicketingSystem.UserControls
                     ticketSale.Ticket = selectedTicket;
                     ticketSale.EntryTime = checkInTime.ToString("h:mm:ss tt");
                     ticketSale.ExitTime = checkOutTime.ToString("h:mm:ss tt");
-                    ticketSale.SoldDate = DateTime.Today;
+                    ticketSale.TicketDate = ticketDatePicker.Value.Date;
 
                     // adding ticket Sale obj to list of ticket sale object
                     ticketSales.Add(ticketSale);
@@ -145,6 +145,13 @@ namespace SmartTicketingSystem.UserControls
             fileStream.Close();
 
             LoadData(ticketSales);
+        }
+
+        private void comboTicket_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // getting details of currently selected ticket
+            var selectedTicket = (Ticket)comboTicket.SelectedItem;
+            txtTicketPrice.Text = Convert.ToString(selectedTicket.TicketRate);
         }
     }
 }

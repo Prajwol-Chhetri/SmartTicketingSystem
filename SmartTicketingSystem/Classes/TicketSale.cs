@@ -35,6 +35,6 @@ namespace SmartTicketingSystem.Classes
 
         public string ExitTime { get; set; }
 
-        public DateTime SoldDate { get; set; }
+        public DateTime TicketDate { get; set; }
     }
 }
