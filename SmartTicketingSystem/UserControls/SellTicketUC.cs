@@ -125,6 +125,7 @@ namespace SmartTicketingSystem.UserControls
                     ticketSale.EntryTime = checkInTime.ToString("h:mm:ss tt");
                     ticketSale.ExitTime = checkOutTime.ToString("h:mm:ss tt");
                     ticketSale.TicketDate = ticketDatePicker.Value.Date;
+                    ticketSale.Total = Convert.ToDecimal(txtTicketPrice.Text);
 
                     // adding ticket Sale obj to list of ticket sale object
                     ticketSales.Add(ticketSale);
@@ -147,11 +148,31 @@ namespace SmartTicketingSystem.UserControls
             LoadData(ticketSales);
         }
 
-        private void comboTicket_SelectedIndexChanged(object sender, EventArgs e)
+        // creating a function to update ticket price
+        public void UpdatePrice(ComboBox x, TextBox y, DateTimePicker z)
         {
             // getting details of currently selected ticket
-            var selectedTicket = (Ticket)comboTicket.SelectedItem;
-            txtTicketPrice.Text = Convert.ToString(selectedTicket.TicketRate);
+            var selectedTicket = (Ticket)x.SelectedItem;
+
+            // increasing price of ticket in weeknds
+            if (z.Value.DayOfWeek == DayOfWeek.Saturday || z.Value.DayOfWeek == DayOfWeek.Sunday)
+            {
+                y.Text = Convert.ToString(selectedTicket.TicketRate + 50);
+            }
+            else
+            {
+                y.Text = Convert.ToString(selectedTicket.TicketRate);
+            }
+        }
+
+        private void comboTicket_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            UpdatePrice(comboTicket, txtTicketPrice, ticketDatePicker);
+        }
+
+        private void ticketDatePicker_ValueChanged(object sender, EventArgs e)
+        {
+            UpdatePrice(comboTicket, txtTicketPrice, ticketDatePicker);
         }
     }
 }

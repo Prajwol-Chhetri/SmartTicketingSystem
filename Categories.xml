@@ -1,2 +1,13 @@
 <?xml version="1.0"?>
-<ArrayOfCategory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+<ArrayOfCategory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Category>
+    <ID>c988e725-181b-42af-9e56-3d64365c9d2c</ID>
+    <NoOfPeople>1</NoOfPeople>
+    <CategoryName>child</CategoryName>
+  </Category>
+  <Category>
+    <ID>6269dcb6-3626-40de-88f5-423ba7603f67</ID>
+    <NoOfPeople>1</NoOfPeople>
+    <CategoryName>adult</CategoryName>
+  </Category>
+</ArrayOfCategory>

@@ -21,10 +21,7 @@ namespace SmartTicketingSystem.Classes
             get { return Ticket.TicketName; }
         }
 
-        public string TicketPrice
-        {
-            get { return "Rs. " + Convert.ToString(Ticket.TicketRate); }
-        }
+        public decimal Total { get; set; }
 
         public int NoOfPeople
         {
