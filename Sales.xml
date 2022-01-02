@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<ArrayOfTicketSale xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TicketSale>
+    <ID>5de6b191-f1ef-4f64-aab7-dc5155b7f22d</ID>
+    <CustomerName>p</CustomerName>
+    <CustomerContact>645645</CustomerContact>
+    <Ticket>
+      <ID>7e422414-9df6-4103-a66e-70004f36272e</ID>
+      <TicketRate>100</TicketRate>
+      <TicketTiming>
+        <ID>fb2cffc9-964b-4259-b935-def16c9842cb</ID>
+        <NoOfHours>1</NoOfHours>
+        <TimingName>one hour</TimingName>
+      </TicketTiming>
+      <TicketCategory>
+        <ID>c988e725-181b-42af-9e56-3d64365c9d2c</ID>
+        <NoOfPeople>1</NoOfPeople>
+        <CategoryName>child</CategoryName>
+      </TicketCategory>
+      <TicketName>child-1</TicketName>
+    </Ticket>
+    <Total>150</Total>
+    <EntryTime>12:12:12 PM</EntryTime>
+    <ExitTime>1:12:12 PM</ExitTime>
+    <TicketDate>2022-01-02T00:00:00+05:45</TicketDate>
+  </TicketSale>
+</ArrayOfTicketSale>

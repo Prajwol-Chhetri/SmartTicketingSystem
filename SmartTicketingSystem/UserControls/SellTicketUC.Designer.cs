@@ -35,16 +35,6 @@ namespace SmartTicketingSystem.UserControls
             this.btnSellTicket = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.sellDataView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TicketDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CustomerContact = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TicketName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TicketPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NoOfPeople = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.entryTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.exitTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ticketSaleBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.txtEntryTime = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtCustomerName = new System.Windows.Forms.TextBox();
@@ -55,9 +45,19 @@ namespace SmartTicketingSystem.UserControls
             this.ticketDatePicker = new System.Windows.Forms.DateTimePicker();
             this.txtTicketPrice = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.ticketSaleBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.ticketBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ticketSaleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ticketSaleBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TicketDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CustomerContact = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TicketName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NoOfPeople = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.entryTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.exitTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.sellDataView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ticketSaleBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ticketBindingSource)).BeginInit();
@@ -130,8 +130,8 @@ namespace SmartTicketingSystem.UserControls
             this.CustomerName,
             this.CustomerContact,
             this.TicketName,
-            this.TicketPrice,
             this.NoOfPeople,
+            this.Total,
             this.entryTimeDataGridViewTextBoxColumn,
             this.exitTimeDataGridViewTextBoxColumn});
             this.sellDataView.DataSource = this.ticketSaleBindingSource2;
@@ -143,76 +143,6 @@ namespace SmartTicketingSystem.UserControls
             this.sellDataView.RowTemplate.Height = 24;
             this.sellDataView.Size = new System.Drawing.Size(984, 208);
             this.sellDataView.TabIndex = 53;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // TicketDate
-            // 
-            this.TicketDate.DataPropertyName = "TicketDate";
-            this.TicketDate.HeaderText = "TicketDate";
-            this.TicketDate.MinimumWidth = 6;
-            this.TicketDate.Name = "TicketDate";
-            // 
-            // CustomerName
-            // 
-            this.CustomerName.DataPropertyName = "CustomerName";
-            this.CustomerName.HeaderText = "CustomerName";
-            this.CustomerName.MinimumWidth = 6;
-            this.CustomerName.Name = "CustomerName";
-            // 
-            // CustomerContact
-            // 
-            this.CustomerContact.DataPropertyName = "CustomerContact";
-            this.CustomerContact.HeaderText = "CustomerContact";
-            this.CustomerContact.MinimumWidth = 6;
-            this.CustomerContact.Name = "CustomerContact";
-            // 
-            // TicketName
-            // 
-            this.TicketName.DataPropertyName = "TicketName";
-            this.TicketName.HeaderText = "TicketName";
-            this.TicketName.MinimumWidth = 6;
-            this.TicketName.Name = "TicketName";
-            this.TicketName.ReadOnly = true;
-            // 
-            // TicketPrice
-            // 
-            this.TicketPrice.DataPropertyName = "TicketPrice";
-            this.TicketPrice.HeaderText = "TicketPrice";
-            this.TicketPrice.MinimumWidth = 6;
-            this.TicketPrice.Name = "TicketPrice";
-            this.TicketPrice.ReadOnly = true;
-            // 
-            // NoOfPeople
-            // 
-            this.NoOfPeople.DataPropertyName = "NoOfPeople";
-            this.NoOfPeople.HeaderText = "NoOfPeople";
-            this.NoOfPeople.MinimumWidth = 6;
-            this.NoOfPeople.Name = "NoOfPeople";
-            this.NoOfPeople.ReadOnly = true;
-            // 
-            // entryTimeDataGridViewTextBoxColumn
-            // 
-            this.entryTimeDataGridViewTextBoxColumn.DataPropertyName = "EntryTime";
-            this.entryTimeDataGridViewTextBoxColumn.HeaderText = "EntryTime";
-            this.entryTimeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.entryTimeDataGridViewTextBoxColumn.Name = "entryTimeDataGridViewTextBoxColumn";
-            // 
-            // exitTimeDataGridViewTextBoxColumn
-            // 
-            this.exitTimeDataGridViewTextBoxColumn.DataPropertyName = "ExitTime";
-            this.exitTimeDataGridViewTextBoxColumn.HeaderText = "ExitTime";
-            this.exitTimeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.exitTimeDataGridViewTextBoxColumn.Name = "exitTimeDataGridViewTextBoxColumn";
-            // 
-            // ticketSaleBindingSource2
-            // 
-            this.ticketSaleBindingSource2.DataSource = typeof(SmartTicketingSystem.Classes.TicketSale);
             // 
             // txtEntryTime
             // 
@@ -316,6 +246,10 @@ namespace SmartTicketingSystem.UserControls
             this.label7.TabIndex = 64;
             this.label7.Text = "Ticket For:";
             // 
+            // ticketSaleBindingSource2
+            // 
+            this.ticketSaleBindingSource2.DataSource = typeof(SmartTicketingSystem.Classes.TicketSale);
+            // 
             // ticketBindingSource
             // 
             this.ticketBindingSource.DataSource = typeof(SmartTicketingSystem.Classes.Ticket);
@@ -327,6 +261,71 @@ namespace SmartTicketingSystem.UserControls
             // ticketSaleBindingSource1
             // 
             this.ticketSaleBindingSource1.DataSource = typeof(SmartTicketingSystem.Classes.TicketSale);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // TicketDate
+            // 
+            this.TicketDate.DataPropertyName = "TicketDate";
+            this.TicketDate.HeaderText = "TicketDate";
+            this.TicketDate.MinimumWidth = 6;
+            this.TicketDate.Name = "TicketDate";
+            // 
+            // CustomerName
+            // 
+            this.CustomerName.DataPropertyName = "CustomerName";
+            this.CustomerName.HeaderText = "CustomerName";
+            this.CustomerName.MinimumWidth = 6;
+            this.CustomerName.Name = "CustomerName";
+            // 
+            // CustomerContact
+            // 
+            this.CustomerContact.DataPropertyName = "CustomerContact";
+            this.CustomerContact.HeaderText = "CustomerContact";
+            this.CustomerContact.MinimumWidth = 6;
+            this.CustomerContact.Name = "CustomerContact";
+            // 
+            // TicketName
+            // 
+            this.TicketName.DataPropertyName = "TicketName";
+            this.TicketName.HeaderText = "TicketName";
+            this.TicketName.MinimumWidth = 6;
+            this.TicketName.Name = "TicketName";
+            this.TicketName.ReadOnly = true;
+            // 
+            // NoOfPeople
+            // 
+            this.NoOfPeople.DataPropertyName = "NoOfPeople";
+            this.NoOfPeople.HeaderText = "NoOfPeople";
+            this.NoOfPeople.MinimumWidth = 6;
+            this.NoOfPeople.Name = "NoOfPeople";
+            this.NoOfPeople.ReadOnly = true;
+            // 
+            // Total
+            // 
+            this.Total.DataPropertyName = "Total";
+            this.Total.HeaderText = "Total";
+            this.Total.MinimumWidth = 6;
+            this.Total.Name = "Total";
+            // 
+            // entryTimeDataGridViewTextBoxColumn
+            // 
+            this.entryTimeDataGridViewTextBoxColumn.DataPropertyName = "EntryTime";
+            this.entryTimeDataGridViewTextBoxColumn.HeaderText = "EntryTime";
+            this.entryTimeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.entryTimeDataGridViewTextBoxColumn.Name = "entryTimeDataGridViewTextBoxColumn";
+            // 
+            // exitTimeDataGridViewTextBoxColumn
+            // 
+            this.exitTimeDataGridViewTextBoxColumn.DataPropertyName = "ExitTime";
+            this.exitTimeDataGridViewTextBoxColumn.HeaderText = "ExitTime";
+            this.exitTimeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.exitTimeDataGridViewTextBoxColumn.Name = "exitTimeDataGridViewTextBoxColumn";
             // 
             // SellTicketUC
             // 
@@ -384,8 +383,8 @@ namespace SmartTicketingSystem.UserControls
         private System.Windows.Forms.DataGridViewTextBoxColumn CustomerName;
         private System.Windows.Forms.DataGridViewTextBoxColumn CustomerContact;
         private System.Windows.Forms.DataGridViewTextBoxColumn TicketName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TicketPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn NoOfPeople;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
         private System.Windows.Forms.DataGridViewTextBoxColumn entryTimeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn exitTimeDataGridViewTextBoxColumn;
     }
