@@ -79,7 +79,7 @@ namespace SmartTicketingSystem.UserControls
             // adding datatble as datasource to the datagrid in the form
             chartCustomers.DataSource = dt;
 
-            // adding data to chart
+            // adding data to Customers Chart
             chartCustomers.Series["Series1"].LegendText = "Visitors";
             chartCustomers.Series["Series1"].ChartType = SeriesChartType.Column;
             chartCustomers.Series["Series1"].IsValueShownAsLabel = true;
@@ -89,6 +89,7 @@ namespace SmartTicketingSystem.UserControls
             chartCustomers.ChartAreas["ChartArea1"].AxisY.MajorGrid.Enabled = false;
             chartCustomers.DataSource = dt;
 
+            // adding data to Earning Chart
             chartEarning.Series["Series1"].LegendText = "Price";
             chartEarning.Series["Series1"].ChartType = SeriesChartType.Column;
             chartEarning.Series["Series1"].IsValueShownAsLabel = true;
