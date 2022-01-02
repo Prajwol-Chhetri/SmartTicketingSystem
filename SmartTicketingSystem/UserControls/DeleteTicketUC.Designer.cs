@@ -34,14 +34,14 @@ namespace SmartTicketingSystem.UserControls
             this.comboTicketName = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnDeleteTicket = new System.Windows.Forms.Button();
-            this.ticketBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ticketDataView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Duration = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.ticketBindingSource)).BeginInit();
+            this.ticketBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ticketDataView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ticketBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -56,6 +56,7 @@ namespace SmartTicketingSystem.UserControls
             this.label1.TabIndex = 27;
             this.label1.Text = "Select Ticket to Delete";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // comboTicketName
             // 
@@ -65,6 +66,7 @@ namespace SmartTicketingSystem.UserControls
             this.comboTicketName.Name = "comboTicketName";
             this.comboTicketName.Size = new System.Drawing.Size(434, 31);
             this.comboTicketName.TabIndex = 34;
+            this.comboTicketName.SelectedIndexChanged += new System.EventHandler(this.comboTicketName_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -76,6 +78,7 @@ namespace SmartTicketingSystem.UserControls
             this.label5.Size = new System.Drawing.Size(136, 23);
             this.label5.TabIndex = 36;
             this.label5.Text = "Ticket Name:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // btnDeleteTicket
             // 
@@ -92,10 +95,6 @@ namespace SmartTicketingSystem.UserControls
             this.btnDeleteTicket.Text = "Delete Ticket";
             this.btnDeleteTicket.UseVisualStyleBackColor = false;
             this.btnDeleteTicket.Click += new System.EventHandler(this.btnDeleteTicket_Click);
-            // 
-            // ticketBindingSource
-            // 
-            this.ticketBindingSource.DataSource = typeof(SmartTicketingSystem.Classes.Ticket);
             // 
             // ticketDataView
             // 
@@ -121,13 +120,6 @@ namespace SmartTicketingSystem.UserControls
             this.ticketDataView.Size = new System.Drawing.Size(984, 208);
             this.ticketDataView.TabIndex = 53;
             // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "TicketRate";
-            this.dataGridViewTextBoxColumn2.HeaderText = "TicketRate";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
             // Duration
             // 
             this.Duration.DataPropertyName = "Duration";
@@ -135,6 +127,13 @@ namespace SmartTicketingSystem.UserControls
             this.Duration.MinimumWidth = 6;
             this.Duration.Name = "Duration";
             this.Duration.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "TicketRate";
+            this.dataGridViewTextBoxColumn2.HeaderText = "TicketRate";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -151,6 +150,10 @@ namespace SmartTicketingSystem.UserControls
             this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
+            // ticketBindingSource
+            // 
+            this.ticketBindingSource.DataSource = typeof(SmartTicketingSystem.Classes.Ticket);
+            // 
             // DeleteTicketUC
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -162,8 +165,8 @@ namespace SmartTicketingSystem.UserControls
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "DeleteTicketUC";
             this.Size = new System.Drawing.Size(984, 580);
-            ((System.ComponentModel.ISupportInitialize)(this.ticketBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ticketDataView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ticketBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

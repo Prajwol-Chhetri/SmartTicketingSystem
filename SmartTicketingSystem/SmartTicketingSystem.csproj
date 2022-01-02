@@ -134,6 +134,12 @@
     <Compile Include="UserControls\DeleteTicketUC.Designer.cs">
       <DependentUpon>DeleteTicketUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\DeleteTimingUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\DeleteTimingUC.Designer.cs">
+      <DependentUpon>DeleteTimingUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\DeRegistrationUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -217,6 +223,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\DeleteTicketUC.resx">
       <DependentUpon>DeleteTicketUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\DeleteTimingUC.resx">
+      <DependentUpon>DeleteTimingUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\DeRegistrationUC.resx">
       <DependentUpon>DeRegistrationUC.cs</DependentUpon>

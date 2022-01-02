@@ -39,7 +39,8 @@ namespace SmartTicketingSystem.UserControls
 
         private void btnDeleteTiming_Click(object sender, EventArgs e)
         {
-
+            DeleteTimingUC deleteUC = new DeleteTimingUC();
+            AddControlsToPanel(deleteUC);
         }
     }
 }

@@ -1,13 +1,2 @@
 <?xml version="1.0"?>
-<ArrayOfTiming xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Timing>
-    <ID>f4b38e72-8954-40b0-b8fc-3f64042449c2</ID>
-    <NoOfHours>1</NoOfHours>
-    <TimingName>one hour</TimingName>
-  </Timing>
-  <Timing>
-    <ID>dbd51abe-a374-4cd7-9011-44b8eb0f5032</ID>
-    <NoOfHours>12</NoOfHours>
-    <TimingName>half day</TimingName>
-  </Timing>
-</ArrayOfTiming>
+<ArrayOfTiming xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />

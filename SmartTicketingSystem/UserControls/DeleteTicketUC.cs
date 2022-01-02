@@ -80,5 +80,20 @@ namespace SmartTicketingSystem.UserControls
                 LoadData(tickets);
             }
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboTicketName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
