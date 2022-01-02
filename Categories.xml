@@ -1,13 +1,2 @@
 <?xml version="1.0"?>
-<ArrayOfCategory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Category>
-    <ID>3e839b16-b13a-4fc2-b2c9-2bfee5e8adb8</ID>
-    <NoOfPeople>1</NoOfPeople>
-    <CategoryName>child</CategoryName>
-  </Category>
-  <Category>
-    <ID>27f48895-c801-4206-b032-13306d14d77f</ID>
-    <NoOfPeople>5</NoOfPeople>
-    <CategoryName>group of 5</CategoryName>
-  </Category>
-</ArrayOfCategory>
+<ArrayOfCategory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />

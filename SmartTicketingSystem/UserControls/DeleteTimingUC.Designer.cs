@@ -117,6 +117,7 @@ namespace SmartTicketingSystem.UserControls
             this.label5.Size = new System.Drawing.Size(140, 23);
             this.label5.TabIndex = 55;
             this.label5.Text = "Timing Name:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // comboTimingName
             // 
@@ -126,6 +127,7 @@ namespace SmartTicketingSystem.UserControls
             this.comboTimingName.Name = "comboTimingName";
             this.comboTimingName.Size = new System.Drawing.Size(434, 31);
             this.comboTimingName.TabIndex = 54;
+            this.comboTimingName.SelectedIndexChanged += new System.EventHandler(this.comboTimingName_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -139,6 +141,7 @@ namespace SmartTicketingSystem.UserControls
             this.label1.TabIndex = 53;
             this.label1.Text = "Select Timing to Delete";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // DeleteTimingUC
             // 

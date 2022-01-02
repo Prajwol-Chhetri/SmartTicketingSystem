@@ -38,7 +38,8 @@ namespace SmartTicketingSystem.UserControls
 
         private void btnDeleteCategory_Click(object sender, EventArgs e)
         {
-
+            DeleteCategoryUC deleteUC = new DeleteCategoryUC();
+            AddControlsToPanel(deleteUC);
         }
     }
 }
