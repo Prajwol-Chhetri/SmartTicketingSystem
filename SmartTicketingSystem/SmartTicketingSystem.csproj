@@ -135,6 +135,12 @@
     <Compile Include="UserControls\DailyReportUC.Designer.cs">
       <DependentUpon>DailyReportUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\GetTicketUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\GetTicketUC.Designer.cs">
+      <DependentUpon>GetTicketUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ReportHandlingUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -260,6 +266,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\DailyReportUC.resx">
       <DependentUpon>DailyReportUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\GetTicketUC.resx">
+      <DependentUpon>GetTicketUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ReportHandlingUC.resx">
       <DependentUpon>ReportHandlingUC.cs</DependentUpon>

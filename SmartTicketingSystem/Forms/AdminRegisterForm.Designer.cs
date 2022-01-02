@@ -29,6 +29,7 @@ namespace SmartTicketingSystem.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminRegisterForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,8 +47,10 @@ namespace SmartTicketingSystem.Forms
             this.label7 = new System.Windows.Forms.Label();
             this.btnRegisterAdmin = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -147,6 +150,7 @@ namespace SmartTicketingSystem.Forms
             this.txtAdminFirstName.Name = "txtAdminFirstName";
             this.txtAdminFirstName.Size = new System.Drawing.Size(434, 36);
             this.txtAdminFirstName.TabIndex = 15;
+            this.txtAdminFirstName.Validating += new System.ComponentModel.CancelEventHandler(this.firstNameValidation);
             // 
             // txtAdminLastName
             // 
@@ -156,6 +160,7 @@ namespace SmartTicketingSystem.Forms
             this.txtAdminLastName.Name = "txtAdminLastName";
             this.txtAdminLastName.Size = new System.Drawing.Size(434, 36);
             this.txtAdminLastName.TabIndex = 17;
+            this.txtAdminLastName.Validating += new System.ComponentModel.CancelEventHandler(this.lastNameValidation);
             // 
             // label5
             // 
@@ -176,6 +181,7 @@ namespace SmartTicketingSystem.Forms
             this.txtAdminEmail.Name = "txtAdminEmail";
             this.txtAdminEmail.Size = new System.Drawing.Size(434, 36);
             this.txtAdminEmail.TabIndex = 19;
+            this.txtAdminEmail.Validating += new System.ComponentModel.CancelEventHandler(this.emailValidation);
             // 
             // label6
             // 
@@ -197,6 +203,7 @@ namespace SmartTicketingSystem.Forms
             this.txtAdminPassword.Size = new System.Drawing.Size(434, 36);
             this.txtAdminPassword.TabIndex = 21;
             this.txtAdminPassword.UseSystemPasswordChar = true;
+            this.txtAdminPassword.Validating += new System.ComponentModel.CancelEventHandler(this.passwordValidation);
             // 
             // label7
             // 
@@ -238,6 +245,10 @@ namespace SmartTicketingSystem.Forms
             this.label9.Text = "Already Registered?";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // AdminRegisterForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -264,6 +275,7 @@ namespace SmartTicketingSystem.Forms
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -287,5 +299,6 @@ namespace SmartTicketingSystem.Forms
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnRegisterAdmin;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

@@ -41,6 +41,11 @@ namespace SmartTicketingSystem.Forms
 
         private void btnRegisterAdmin_Click(object sender, EventArgs e)
         {
+            if (ValidateChildren(ValidationConstraints.Enabled))
+            {
+                MessageBox.Show("Demo App - Message!");
+            }
+
             // regex to check for email valid
             string pattern = @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$";
             Regex rg = new Regex(pattern);
@@ -88,6 +93,66 @@ namespace SmartTicketingSystem.Forms
             // serializing register Users object to XMl file and closing it
             xmlSerializer.Serialize(fileStream, users);
             fileStream.Close();
+        }
+
+        private void firstNameValidation(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtAdminFirstName.Text))
+            {
+                e.Cancel = true;
+                txtAdminFirstName.Focus();
+                errorProvider1.SetError(txtAdminFirstName, "First Name should not be left blank!");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(txtAdminFirstName, "");
+            }
+        }
+
+        private void lastNameValidation(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtAdminLastName.Text))
+            {
+                e.Cancel = true;
+                txtAdminLastName.Focus();
+                errorProvider1.SetError(txtAdminLastName, "Last Name should not be left blank!");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(txtAdminLastName, "");
+            }
+        }
+
+        private void emailValidation(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtAdminEmail.Text))
+            {
+                e.Cancel = true;
+                txtAdminEmail.Focus();
+                errorProvider1.SetError(txtAdminEmail, "Email should not be left blank!");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(txtAdminEmail, "");
+            }
+        }
+
+        private void passwordValidation(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtAdminPassword.Text))
+            {
+                e.Cancel = true;
+                txtAdminPassword.Focus();
+                errorProvider1.SetError(txtAdminPassword, "Password should not be left blank!");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(txtAdminPassword, "");
+            }
         }
     }
 }

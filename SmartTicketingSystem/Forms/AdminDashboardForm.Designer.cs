@@ -32,6 +32,7 @@ namespace SmartTicketingSystem.Forms
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminDashboardForm));
             this.panelLeft = new System.Windows.Forms.Panel();
+            this.btnGetTicket = new System.Windows.Forms.Button();
             this.btnSellTicket = new System.Windows.Forms.Button();
             this.btnVisitorTimings = new System.Windows.Forms.Button();
             this.btnVisitorCategories = new System.Windows.Forms.Button();
@@ -66,6 +67,7 @@ namespace SmartTicketingSystem.Forms
             // panelLeft
             // 
             this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.panelLeft.Controls.Add(this.btnGetTicket);
             this.panelLeft.Controls.Add(this.btnSellTicket);
             this.panelLeft.Controls.Add(this.btnVisitorTimings);
             this.panelLeft.Controls.Add(this.btnVisitorCategories);
@@ -80,6 +82,23 @@ namespace SmartTicketingSystem.Forms
             this.panelLeft.Name = "panelLeft";
             this.panelLeft.Size = new System.Drawing.Size(216, 720);
             this.panelLeft.TabIndex = 0;
+            // 
+            // btnGetTicket
+            // 
+            this.btnGetTicket.FlatAppearance.BorderSize = 0;
+            this.btnGetTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGetTicket.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGetTicket.ForeColor = System.Drawing.Color.White;
+            this.btnGetTicket.Image = ((System.Drawing.Image)(resources.GetObject("btnGetTicket.Image")));
+            this.btnGetTicket.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGetTicket.Location = new System.Drawing.Point(12, 592);
+            this.btnGetTicket.Name = "btnGetTicket";
+            this.btnGetTicket.Size = new System.Drawing.Size(194, 60);
+            this.btnGetTicket.TabIndex = 11;
+            this.btnGetTicket.Text = "  Get Ticket";
+            this.btnGetTicket.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGetTicket.UseVisualStyleBackColor = true;
+            this.btnGetTicket.Click += new System.EventHandler(this.btnGetTicket_Click);
             // 
             // btnSellTicket
             // 
@@ -436,5 +455,6 @@ namespace SmartTicketingSystem.Forms
         private System.Windows.Forms.Button btnVisitorTimings;
         private System.Windows.Forms.Button btnVisitorCategories;
         private System.Windows.Forms.Button btnSellTicket;
+        private System.Windows.Forms.Button btnGetTicket;
     }
 }

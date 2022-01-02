@@ -132,5 +132,12 @@ namespace SmartTicketingSystem.Forms
             SellTicketUC sellTicketUC = new SellTicketUC();
             AddControlsToPanel(sellTicketUC);
         }
+
+        private void btnGetTicket_Click(object sender, EventArgs e)
+        {
+            moveSidePanel(btnGetTicket);
+            GetTicketUC getTicketUC = new GetTicketUC();
+            AddControlsToPanel(getTicketUC);
+        }
     }
 }

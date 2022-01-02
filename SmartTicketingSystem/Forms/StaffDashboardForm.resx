@@ -118,6 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnGetTicket.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAQ5JREFUWEft
+        lzFOAkEUhichRM5gxQ2wYF0uQmVL9A40cg1stdLQKXcxVlYUmKgVdsv33LeBnV1gSF4WivmSL2H+zWN+
+        sgNkXZZlC7Rk5I5BhyyZ6FuHoUOWxAKxQCxwXgVYX2JXl1X+R2zxC4zxG/salZEJY/wCLXzEXxxovIHQ
+        msoZINsukWqcQ2BN7SEklxJP+IPXGjdXQOBatQQvQvjAGxwGeI/Pe3zBT1xhElrgHe/wNkApMN3jA8oH
+        +sO06VvQxhl+4VURWrPrEF7gKy4x31xgYU3d11A2f0PZvKdxDoE1pQKsOzjH6uYCoTV+geKnONGojEwY
+        4xc47Z/RQXTIklggFogFji5wwsdz59YcGzikvwv7/gAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="btnSellTicket.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAh1JREFUWEft
