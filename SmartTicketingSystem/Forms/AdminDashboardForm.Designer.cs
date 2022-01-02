@@ -32,6 +32,7 @@ namespace SmartTicketingSystem.Forms
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminDashboardForm));
             this.panelLeft = new System.Windows.Forms.Panel();
+            this.btnSellTicket = new System.Windows.Forms.Button();
             this.btnVisitorTimings = new System.Windows.Forms.Button();
             this.btnVisitorCategories = new System.Windows.Forms.Button();
             this.btnAdminReport = new System.Windows.Forms.Button();
@@ -55,7 +56,6 @@ namespace SmartTicketingSystem.Forms
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timerTime = new System.Windows.Forms.Timer(this.components);
             this.panelControls = new System.Windows.Forms.Panel();
-            this.btnSellTicket = new System.Windows.Forms.Button();
             this.panelLeft.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -81,6 +81,23 @@ namespace SmartTicketingSystem.Forms
             this.panelLeft.Size = new System.Drawing.Size(216, 720);
             this.panelLeft.TabIndex = 0;
             // 
+            // btnSellTicket
+            // 
+            this.btnSellTicket.FlatAppearance.BorderSize = 0;
+            this.btnSellTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSellTicket.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSellTicket.ForeColor = System.Drawing.Color.White;
+            this.btnSellTicket.Image = ((System.Drawing.Image)(resources.GetObject("btnSellTicket.Image")));
+            this.btnSellTicket.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSellTicket.Location = new System.Drawing.Point(12, 526);
+            this.btnSellTicket.Name = "btnSellTicket";
+            this.btnSellTicket.Size = new System.Drawing.Size(194, 60);
+            this.btnSellTicket.TabIndex = 10;
+            this.btnSellTicket.Text = "  Sell Ticket";
+            this.btnSellTicket.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSellTicket.UseVisualStyleBackColor = true;
+            this.btnSellTicket.Click += new System.EventHandler(this.btnSellTicket_Click);
+            // 
             // btnVisitorTimings
             // 
             this.btnVisitorTimings.FlatAppearance.BorderSize = 0;
@@ -89,7 +106,7 @@ namespace SmartTicketingSystem.Forms
             this.btnVisitorTimings.ForeColor = System.Drawing.Color.White;
             this.btnVisitorTimings.Image = ((System.Drawing.Image)(resources.GetObject("btnVisitorTimings.Image")));
             this.btnVisitorTimings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVisitorTimings.Location = new System.Drawing.Point(12, 338);
+            this.btnVisitorTimings.Location = new System.Drawing.Point(12, 208);
             this.btnVisitorTimings.Name = "btnVisitorTimings";
             this.btnVisitorTimings.Size = new System.Drawing.Size(194, 60);
             this.btnVisitorTimings.TabIndex = 9;
@@ -157,7 +174,7 @@ namespace SmartTicketingSystem.Forms
             this.btnAdminTickets.ForeColor = System.Drawing.Color.White;
             this.btnAdminTickets.Image = ((System.Drawing.Image)(resources.GetObject("btnAdminTickets.Image")));
             this.btnAdminTickets.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdminTickets.Location = new System.Drawing.Point(12, 208);
+            this.btnAdminTickets.Location = new System.Drawing.Point(12, 340);
             this.btnAdminTickets.Name = "btnAdminTickets";
             this.btnAdminTickets.Size = new System.Drawing.Size(194, 60);
             this.btnAdminTickets.TabIndex = 5;
@@ -365,23 +382,6 @@ namespace SmartTicketingSystem.Forms
             this.panelControls.Name = "panelControls";
             this.panelControls.Size = new System.Drawing.Size(984, 580);
             this.panelControls.TabIndex = 4;
-            // 
-            // btnSellTicket
-            // 
-            this.btnSellTicket.FlatAppearance.BorderSize = 0;
-            this.btnSellTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSellTicket.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSellTicket.ForeColor = System.Drawing.Color.White;
-            this.btnSellTicket.Image = ((System.Drawing.Image)(resources.GetObject("btnSellTicket.Image")));
-            this.btnSellTicket.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSellTicket.Location = new System.Drawing.Point(12, 526);
-            this.btnSellTicket.Name = "btnSellTicket";
-            this.btnSellTicket.Size = new System.Drawing.Size(194, 60);
-            this.btnSellTicket.TabIndex = 10;
-            this.btnSellTicket.Text = "  Sell Ticket";
-            this.btnSellTicket.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSellTicket.UseVisualStyleBackColor = true;
-            this.btnSellTicket.Click += new System.EventHandler(this.btnSellTicket_Click);
             // 
             // AdminDashboardForm
             // 

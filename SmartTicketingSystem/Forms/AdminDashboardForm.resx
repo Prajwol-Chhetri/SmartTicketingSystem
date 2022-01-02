@@ -120,17 +120,17 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnSellTicket.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAIdSURBVFhH7ZdPSFRRFIcHzEWSlQoitBBaBAqugrAgMWrVpo1liwhJwlUEBf6BJNBVZIFgqBAt
-        cmGr2mQQLQULdylBYbtKSNIC/0Lp+P3enDcNzp3nU+6AwnzwMe/de+475867896dRC6SyeRF/I2+WMdx
-        LLYU0RA4qFF54ISliIbA4VS8d2osRTQERhXwHuvwuMMm/Iu58FLAgIVlQV85LgZRbrwUIBZyuIJReCtg
-        txQKKBRQKGD/FNCVivfKEpZZimgILEK9ki97NN6bcM9AxYdQb7gKa4oNY0rtcGdoIN7CCdQuJuQPamFW
-        WWgW9B3A2/gDxXc8iTXYgqctNBs6NdPHqERRzGKdDUtDWz1+VICh5K34AjMnorVQjEfDgWfwJf7DuPzC
-        ZjyImnU3ZiZ5jm2ouBBN7CZ24pwaoF8FLKeOd4V+Vm/xPt7A69iAzzCTN3gOJ4Oz/8yqgKepY2+8w/AZ
-        ol21bkM7rqphC09UQC1uBKd+0LUu4WvUt6H9owtNvChcB2NB0/Y8Qt3vVziF85i5HdM9v4PH7NO1PfuJ
-        V4LEITScD7ri8QlHsRc7HD7Er+hiBN3PFDo+BCH54QuetVRuCLgWhPpF62EID1ua3BCkh8M3FFpAuo8V
-        eA91r3fKDDba5ePBgAt41U7T0HYEezDqD0eIHmh9WGLD/cFFK7Ef19DFNJ6y8PxBkmp8gFrtmvFnvIvx
-        /nqnSSQ2AXUibX8tmAPuAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAh1JREFUWEft
+        l09IVFEUhwfMRZKVCiK0EFoECq6CsCAxatWmjWWLCEnCVQQF/oEk0FVkgWCoEC1yYavaZBAtBQt3KUFh
+        u0pI0gL/Qun4/d6cNw3OnedT7oDCfPAx79177jvnzrvz3p1ELpLJ5EX8jb5Yx3EsthTREDioUXnghKWI
+        hsDhVLx3aixFNARGFfAe6/C4wyb8i7nwUsCAhWVBXzkuBlFuvBQgFnK4glF4K2C3FAooFFAoYP8U0JWK
+        98oSllmKaAgsQr2SL3s03ptwz0DFh1BvuAprig1jSu1wZ2gg3sIJ1C4m5A9qYVZZaBb0HcDb+APFdzyJ
+        NdiCpy00Gzo108eoRFHMYp0NS0NbPX5UgKHkrfgCMyeitVCMR8OBZ/Al/sO4/MJmPIiadTdmJnmObai4
+        EE3sJnbinBqgXwUsp453hX5Wb/E+3sDr2IDPMJM3eA4ng7P/zKqAp6ljb7zD8BmiXbVuQzuuqmELT1RA
+        LW4Ep37QtS7ha9S3of2jC028KFwHY0HT9jxC3e9XOIXzmLkd0z2/g8fs07U9+4lXgsQhNJwPuuLxCUex
+        FzscPsSv6GIE3c8UOj4EIfnhC561VG4IuBaE+kXrYQgPW5rcEKSHwzcUWkC6jxV4D3Wvd8oMNtrl48GA
+        C3jVTtPQdgR7MOoPR4geaH1YYsP9wUUrsR/X0MU0nrLw/EGSanyAWu2a8We8i/H+eqdJJDYBdSJtfy2Y
+        A+4AAAAASUVORK5CYII=
 </value>
   </data>
   <data name="btnVisitorTimings.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

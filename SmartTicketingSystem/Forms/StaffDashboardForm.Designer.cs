@@ -33,7 +33,6 @@ namespace SmartTicketingSystem.Forms
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StaffDashboardForm));
             this.panelLeft = new System.Windows.Forms.Panel();
             this.btnStaffReport = new System.Windows.Forms.Button();
-            this.btnStaffTickets = new System.Windows.Forms.Button();
             this.panelSide = new System.Windows.Forms.Panel();
             this.btnStaffDashboard = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -52,6 +51,7 @@ namespace SmartTicketingSystem.Forms
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timerTime = new System.Windows.Forms.Timer(this.components);
             this.panelControls = new System.Windows.Forms.Panel();
+            this.btnSellTicket = new System.Windows.Forms.Button();
             this.panelLeft.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -62,8 +62,8 @@ namespace SmartTicketingSystem.Forms
             // panelLeft
             // 
             this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.panelLeft.Controls.Add(this.btnSellTicket);
             this.panelLeft.Controls.Add(this.btnStaffReport);
-            this.panelLeft.Controls.Add(this.btnStaffTickets);
             this.panelLeft.Controls.Add(this.panelSide);
             this.panelLeft.Controls.Add(this.btnStaffDashboard);
             this.panelLeft.Controls.Add(this.panel2);
@@ -89,23 +89,6 @@ namespace SmartTicketingSystem.Forms
             this.btnStaffReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnStaffReport.UseVisualStyleBackColor = true;
             this.btnStaffReport.Click += new System.EventHandler(this.btnAdminReport_Click);
-            // 
-            // btnStaffTickets
-            // 
-            this.btnStaffTickets.FlatAppearance.BorderSize = 0;
-            this.btnStaffTickets.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStaffTickets.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStaffTickets.ForeColor = System.Drawing.Color.White;
-            this.btnStaffTickets.Image = ((System.Drawing.Image)(resources.GetObject("btnStaffTickets.Image")));
-            this.btnStaffTickets.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStaffTickets.Location = new System.Drawing.Point(12, 208);
-            this.btnStaffTickets.Name = "btnStaffTickets";
-            this.btnStaffTickets.Size = new System.Drawing.Size(194, 60);
-            this.btnStaffTickets.TabIndex = 5;
-            this.btnStaffTickets.Text = "  Tickets";
-            this.btnStaffTickets.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnStaffTickets.UseVisualStyleBackColor = true;
-            this.btnStaffTickets.Click += new System.EventHandler(this.btnAdminTickets_Click);
             // 
             // panelSide
             // 
@@ -307,6 +290,23 @@ namespace SmartTicketingSystem.Forms
             this.panelControls.Size = new System.Drawing.Size(984, 580);
             this.panelControls.TabIndex = 4;
             // 
+            // btnSellTicket
+            // 
+            this.btnSellTicket.FlatAppearance.BorderSize = 0;
+            this.btnSellTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSellTicket.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSellTicket.ForeColor = System.Drawing.Color.White;
+            this.btnSellTicket.Image = ((System.Drawing.Image)(resources.GetObject("btnSellTicket.Image")));
+            this.btnSellTicket.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSellTicket.Location = new System.Drawing.Point(12, 208);
+            this.btnSellTicket.Name = "btnSellTicket";
+            this.btnSellTicket.Size = new System.Drawing.Size(194, 60);
+            this.btnSellTicket.TabIndex = 11;
+            this.btnSellTicket.Text = "  Sell Ticket";
+            this.btnSellTicket.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSellTicket.UseVisualStyleBackColor = true;
+            this.btnSellTicket.Click += new System.EventHandler(this.btnSellTicket_Click);
+            // 
             // StaffDashboardForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -343,7 +343,6 @@ namespace SmartTicketingSystem.Forms
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button btnStaffReport;
-        private System.Windows.Forms.Button btnStaffTickets;
         private System.Windows.Forms.Panel panelSide;
         private System.Windows.Forms.Button btnMenu;
         private System.Windows.Forms.Label label5;
@@ -356,5 +355,6 @@ namespace SmartTicketingSystem.Forms
         private System.Windows.Forms.Timer timerTime;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panelControls;
+        private System.Windows.Forms.Button btnSellTicket;
     }
 }

@@ -85,11 +85,6 @@ namespace SmartTicketingSystem.Forms
             AddControlsToPanel(dbuc);
         }
 
-        private void btnAdminTickets_Click(object sender, EventArgs e)
-        {
-            moveSidePanel(btnStaffTickets);
-        }
-
         private void btnAdminReport_Click(object sender, EventArgs e)
         {
             moveSidePanel(btnStaffReport);
@@ -99,6 +94,13 @@ namespace SmartTicketingSystem.Forms
         {
             DateTime dt = DateTime.Now;
             labelTime.Text = dt.ToString("HH:mm:ss");
+        }
+
+        private void btnSellTicket_Click(object sender, EventArgs e)
+        {
+            moveSidePanel(btnSellTicket);
+            SellTicketUC sellUC = new SellTicketUC();
+            AddControlsToPanel(sellUC);
         }
     }
 }

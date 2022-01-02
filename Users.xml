@@ -7,4 +7,11 @@
     <Role>Admin</Role>
     <Password>admin</Password>
   </User>
+  <User>
+    <FirstName>staff</FirstName>
+    <LastName>user</LastName>
+    <Email>staff@gmail.com</Email>
+    <Role>Staff</Role>
+    <Password>staff</Password>
+  </User>
 </ArrayOfUser>
