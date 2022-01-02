@@ -128,6 +128,24 @@
     <Compile Include="UserControls\CreateTimingUC.Designer.cs">
       <DependentUpon>CreateTimingUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\DailyReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\DailyReport.Designer.cs">
+      <DependentUpon>DailyReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ReportHandlingUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ReportHandlingUC.Designer.cs">
+      <DependentUpon>ReportHandlingUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\WeeklyReportUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\WeeklyReportUC.Designer.cs">
+      <DependentUpon>WeeklyReportUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\DashboardUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -238,6 +256,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CreateTimingUC.resx">
       <DependentUpon>CreateTimingUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\DailyReport.resx">
+      <DependentUpon>DailyReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ReportHandlingUC.resx">
+      <DependentUpon>ReportHandlingUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\WeeklyReportUC.resx">
+      <DependentUpon>WeeklyReportUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\DashboardUC.resx">
       <DependentUpon>DashboardUC.cs</DependentUpon>

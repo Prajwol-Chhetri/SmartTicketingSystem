@@ -24,4 +24,76 @@
     <ExitTime>1:12:12 PM</ExitTime>
     <TicketDate>2022-01-02T00:00:00+05:45</TicketDate>
   </TicketSale>
+  <TicketSale>
+    <ID>22a2589f-66d9-4f05-97d5-13d884250621</ID>
+    <CustomerName>asd</CustomerName>
+    <CustomerContact>qq2</CustomerContact>
+    <Ticket>
+      <ID>7e422414-9df6-4103-a66e-70004f36272e</ID>
+      <TicketRate>100</TicketRate>
+      <TicketTiming>
+        <ID>fb2cffc9-964b-4259-b935-def16c9842cb</ID>
+        <NoOfHours>1</NoOfHours>
+        <TimingName>one hour</TimingName>
+      </TicketTiming>
+      <TicketCategory>
+        <ID>c988e725-181b-42af-9e56-3d64365c9d2c</ID>
+        <NoOfPeople>1</NoOfPeople>
+        <CategoryName>child</CategoryName>
+      </TicketCategory>
+      <TicketName>child-1</TicketName>
+    </Ticket>
+    <Total>100</Total>
+    <EntryTime>11:22:11 AM</EntryTime>
+    <ExitTime>12:22:11 PM</ExitTime>
+    <TicketDate>2022-01-03T00:00:00+05:45</TicketDate>
+  </TicketSale>
+  <TicketSale>
+    <ID>c7d29020-b312-45e9-8368-f1795be689d9</ID>
+    <CustomerName>asd</CustomerName>
+    <CustomerContact>qq2</CustomerContact>
+    <Ticket>
+      <ID>7e422414-9df6-4103-a66e-70004f36272e</ID>
+      <TicketRate>100</TicketRate>
+      <TicketTiming>
+        <ID>fb2cffc9-964b-4259-b935-def16c9842cb</ID>
+        <NoOfHours>1</NoOfHours>
+        <TimingName>one hour</TimingName>
+      </TicketTiming>
+      <TicketCategory>
+        <ID>c988e725-181b-42af-9e56-3d64365c9d2c</ID>
+        <NoOfPeople>1</NoOfPeople>
+        <CategoryName>child</CategoryName>
+      </TicketCategory>
+      <TicketName>child-1</TicketName>
+    </Ticket>
+    <Total>100</Total>
+    <EntryTime>11:22:11 AM</EntryTime>
+    <ExitTime>12:22:11 PM</ExitTime>
+    <TicketDate>2022-01-03T00:00:00+05:45</TicketDate>
+  </TicketSale>
+  <TicketSale>
+    <ID>fd87673e-d706-4033-9888-795cf277fb86</ID>
+    <CustomerName>asd</CustomerName>
+    <CustomerContact>qq2</CustomerContact>
+    <Ticket>
+      <ID>8453113d-36cd-4fc0-ba26-f0d0b205d448</ID>
+      <TicketRate>200</TicketRate>
+      <TicketTiming>
+        <ID>fb2cffc9-964b-4259-b935-def16c9842cb</ID>
+        <NoOfHours>1</NoOfHours>
+        <TimingName>one hour</TimingName>
+      </TicketTiming>
+      <TicketCategory>
+        <ID>6269dcb6-3626-40de-88f5-423ba7603f67</ID>
+        <NoOfPeople>1</NoOfPeople>
+        <CategoryName>adult</CategoryName>
+      </TicketCategory>
+      <TicketName>adult-1</TicketName>
+    </Ticket>
+    <Total>200</Total>
+    <EntryTime>11:22:11 AM</EntryTime>
+    <ExitTime>12:22:11 PM</ExitTime>
+    <TicketDate>2022-01-03T00:00:00+05:45</TicketDate>
+  </TicketSale>
 </ArrayOfTicketSale>

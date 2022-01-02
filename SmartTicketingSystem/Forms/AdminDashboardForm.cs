@@ -102,6 +102,8 @@ namespace SmartTicketingSystem.Forms
         private void btnAdminReport_Click(object sender, EventArgs e)
         {
             moveSidePanel(btnAdminReport);
+            ReportHandlingUC reportUC = new ReportHandlingUC();
+            AddControlsToPanel(reportUC);
         }
 
         private void timerTime_Tick(object sender, EventArgs e)
