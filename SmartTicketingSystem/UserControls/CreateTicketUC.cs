@@ -105,11 +105,11 @@ namespace SmartTicketingSystem.UserControls
 
             // typecasting selected item to Timing to fetch id
             var selectedTiming = (Timing)comboTicketTime.SelectedItem;
-            ticket.Timing = selectedTiming.ID;
+            ticket.TicketTiming = selectedTiming;
 
             // typecasting selected item to Category to fetch id
             var selectedCategory = (Category)comboTicketCategory.SelectedItem;
-            ticket.Category = selectedCategory.ID;
+            ticket.TicketCategory = selectedCategory;
 
             ticket.TicketName = txtTicketName.Text;
 

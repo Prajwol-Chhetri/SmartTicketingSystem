@@ -13,9 +13,24 @@ namespace SmartTicketingSystem.Classes
 
         public decimal TicketRate { get; set; }
 
-        public Guid Timing { get; set; }
+        public Timing TicketTiming { get; set; }
 
-        public Guid Category { get; set; }
+        public string Duration 
+        {
+            get {return Convert.ToString(TicketTiming.NoOfHours) + " Hours"; } 
+        }
+
+        public Category TicketCategory { get; set; }
+
+        public string Category
+        {
+            get { return TicketCategory.CategoryName; }
+        }
+
+        public int NoOfPeople
+        {
+            get { return TicketCategory.NoOfPeople; }
+        }
 
         public string TicketName { get; set; }
     }

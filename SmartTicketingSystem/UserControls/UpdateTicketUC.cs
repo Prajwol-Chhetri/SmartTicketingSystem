@@ -74,8 +74,8 @@ namespace SmartTicketingSystem.UserControls
         {
             // getting details of currently selected ticket
             var selectedTicket = (Ticket)comboTicketName.SelectedItem;
-            var selectedTicketTiming = timings.SingleOrDefault(x => x.ID == selectedTicket.Timing);
-            var selectedTicketCategory = categories.SingleOrDefault(y => y.ID == selectedTicket.Category);
+            var selectedTicketTiming = timings.SingleOrDefault(x => x.ID == selectedTicket.TicketTiming.ID);
+            var selectedTicketCategory = categories.SingleOrDefault(y => y.ID == selectedTicket.TicketCategory.ID);
 
             // loading data into timing combobox by binding timings list as datasource
             comboTicketTime.DataSource = timings;
@@ -111,9 +111,9 @@ namespace SmartTicketingSystem.UserControls
                 // updating ticket from new data
                 ticketToUpdate.TicketRate = Convert.ToDecimal(txtRate.Text);      
                 var selectedTiming = (Timing)comboTicketTime.SelectedItem; // typecasting selected item to Timing to fetch id
-                ticketToUpdate.Timing = selectedTiming.ID;
+                ticketToUpdate.TicketTiming = selectedTiming;
                 var selectedCategory = (Category)comboTicketCategory.SelectedItem; // typecasting selected item to Category to fetch id
-                ticketToUpdate.Category = selectedCategory.ID;
+                ticketToUpdate.TicketCategory = selectedCategory;
                 ticketToUpdate.TicketName = txtTicketName.Text;
 
                 // serializing tickets object to XMl file and closing it

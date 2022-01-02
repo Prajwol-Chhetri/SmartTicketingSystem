@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Xml.Serialization;
 using System.IO;
 using SmartTicketingSystem.Classes;
+using System.Globalization;
 
 
 namespace SmartTicketingSystem.UserControls
@@ -96,28 +97,29 @@ namespace SmartTicketingSystem.UserControls
             var selectedTicket = (Ticket)comboTicket.SelectedItem;
 
             // fetching time from selected ticket
-            var selectedTicketTiming = timings.SingleOrDefault(x => x.ID == selectedTicket.Timing);
+            var selectedTicketTiming = timings.SingleOrDefault(x => x.ID == selectedTicket.TicketTiming.ID);
 
             // fetching category from selected ticket
-            var selectedTicketCategory = categories.SingleOrDefault(y => y.ID == selectedTicket.Category);
+            var selectedTicketCategory = categories.SingleOrDefault(y => y.ID == selectedTicket.TicketCategory.ID);
 
 
             // assigning check in and check out time
             DateTime currentTime = DateTime.Now;
-            DateTime checkOut = currentTime.AddHours(selectedTicketTiming.NoOfHours);
+            DateTime checkInTime = DateTime.ParseExact(txtEntryTime.Text, "HH:mm:ss", CultureInfo.InvariantCulture);
+            DateTime checkOutTime = checkInTime.AddHours(selectedTicketTiming.NoOfHours);
 
             // start and end time of recreation center
             TimeSpan start = new TimeSpan(10, 0, 0);
             TimeSpan end = new TimeSpan(18, 0, 0);
 
-            if (checkOut.TimeOfDay > start && checkOut.TimeOfDay < end)
+            if (checkInTime.TimeOfDay >= start && checkOutTime.TimeOfDay <= end)
             {
                 // creating new ticketSale object of Ticket Sale class
                 TicketSale ticketSale = new TicketSale();
                 ticketSale.ID = Guid.NewGuid();
-                ticketSale.Ticket = selectedTicket.ID;
-                ticketSale.EntryTime = currentTime.ToString("h:mm:ss tt");
-                ticketSale.ExitTime = checkOut.ToString("h:mm:ss tt");
+                ticketSale.Ticket = selectedTicket;
+                ticketSale.EntryTime = checkInTime.ToString("h:mm:ss tt");
+                ticketSale.ExitTime = checkOutTime.ToString("h:mm:ss tt");
                 ticketSale.SoldDate = DateTime.Today;
 
                 // adding ticket Sale obj to list of ticket sale object
@@ -126,7 +128,7 @@ namespace SmartTicketingSystem.UserControls
             }
             else
             {
-                MessageBox.Show("CANNOT SELL THIS TICKET");
+                MessageBox.Show("PLEASE SELECT A VALID TICKET THAT SATISFIES THE ENTRY AND EXIT TIME");
             }
 
             // serializing Ticket Sales object to XMl file and closing it

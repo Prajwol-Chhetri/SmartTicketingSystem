@@ -1,10 +1,33 @@
 <?xml version="1.0"?>
 <ArrayOfTicket xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Ticket>
-    <ID>bfca72b9-0cc4-4cb4-82fc-9aac2643a2f5</ID>
+    <ID>e0510e20-e6c0-4fbd-b3a9-09f280e7c7d9</ID>
     <TicketRate>100</TicketRate>
-    <Timing>f4b38e72-8954-40b0-b8fc-3f64042449c2</Timing>
-    <Category>3e839b16-b13a-4fc2-b2c9-2bfee5e8adb8</Category>
-    <TicketName>child one hour</TicketName>
+    <TicketTiming>
+      <ID>f4b38e72-8954-40b0-b8fc-3f64042449c2</ID>
+      <NoOfHours>1</NoOfHours>
+      <TimingName>one hour</TimingName>
+    </TicketTiming>
+    <TicketCategory>
+      <ID>3e839b16-b13a-4fc2-b2c9-2bfee5e8adb8</ID>
+      <NoOfPeople>1</NoOfPeople>
+      <CategoryName>child</CategoryName>
+    </TicketCategory>
+    <TicketName>child-1</TicketName>
+  </Ticket>
+  <Ticket>
+    <ID>c82f5f7d-1d58-4504-9564-82caca8674de</ID>
+    <TicketRate>200</TicketRate>
+    <TicketTiming>
+      <ID>f4b38e72-8954-40b0-b8fc-3f64042449c2</ID>
+      <NoOfHours>1</NoOfHours>
+      <TimingName>one hour</TimingName>
+    </TicketTiming>
+    <TicketCategory>
+      <ID>27f48895-c801-4206-b032-13306d14d77f</ID>
+      <NoOfPeople>1</NoOfPeople>
+      <CategoryName>adult</CategoryName>
+    </TicketCategory>
+    <TicketName>adult-1</TicketName>
   </Ticket>
 </ArrayOfTicket>

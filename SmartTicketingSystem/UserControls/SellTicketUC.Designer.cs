@@ -37,13 +37,17 @@ namespace SmartTicketingSystem.UserControls
             this.ticketBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ticketSaleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sellDataView = new System.Windows.Forms.DataGridView();
-            this.ticketSaleBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.ticketSaleBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ticketDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TicketName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TicketPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NoOfPeople = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.entryTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.exitTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soldDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ticketSaleBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.ticketSaleBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.txtEntryTime = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ticketBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ticketSaleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sellDataView)).BeginInit();
@@ -56,7 +60,7 @@ namespace SmartTicketingSystem.UserControls
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label5.Location = new System.Drawing.Point(272, 361);
+            this.label5.Location = new System.Drawing.Point(274, 413);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 23);
             this.label5.TabIndex = 52;
@@ -66,7 +70,7 @@ namespace SmartTicketingSystem.UserControls
             // 
             this.comboTicket.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboTicket.FormattingEnabled = true;
-            this.comboTicket.Location = new System.Drawing.Point(276, 387);
+            this.comboTicket.Location = new System.Drawing.Point(278, 439);
             this.comboTicket.Name = "comboTicket";
             this.comboTicket.Size = new System.Drawing.Size(434, 31);
             this.comboTicket.TabIndex = 51;
@@ -79,7 +83,7 @@ namespace SmartTicketingSystem.UserControls
             this.btnSellTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSellTicket.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSellTicket.ForeColor = System.Drawing.Color.White;
-            this.btnSellTicket.Location = new System.Drawing.Point(276, 446);
+            this.btnSellTicket.Location = new System.Drawing.Point(278, 504);
             this.btnSellTicket.Name = "btnSellTicket";
             this.btnSellTicket.Size = new System.Drawing.Size(434, 44);
             this.btnSellTicket.TabIndex = 50;
@@ -93,7 +97,7 @@ namespace SmartTicketingSystem.UserControls
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label1.Location = new System.Drawing.Point(415, 300);
+            this.label1.Location = new System.Drawing.Point(428, 258);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(149, 34);
             this.label1.TabIndex = 49;
@@ -119,7 +123,9 @@ namespace SmartTicketingSystem.UserControls
             this.sellDataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.sellDataView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
-            this.ticketDataGridViewTextBoxColumn,
+            this.TicketName,
+            this.TicketPrice,
+            this.NoOfPeople,
             this.entryTimeDataGridViewTextBoxColumn,
             this.exitTimeDataGridViewTextBoxColumn,
             this.soldDateDataGridViewTextBoxColumn});
@@ -133,14 +139,6 @@ namespace SmartTicketingSystem.UserControls
             this.sellDataView.Size = new System.Drawing.Size(984, 208);
             this.sellDataView.TabIndex = 53;
             // 
-            // ticketSaleBindingSource2
-            // 
-            this.ticketSaleBindingSource2.DataSource = typeof(SmartTicketingSystem.Classes.TicketSale);
-            // 
-            // ticketSaleBindingSource1
-            // 
-            this.ticketSaleBindingSource1.DataSource = typeof(SmartTicketingSystem.Classes.TicketSale);
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
@@ -148,12 +146,29 @@ namespace SmartTicketingSystem.UserControls
             this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
-            // ticketDataGridViewTextBoxColumn
+            // TicketName
             // 
-            this.ticketDataGridViewTextBoxColumn.DataPropertyName = "Ticket";
-            this.ticketDataGridViewTextBoxColumn.HeaderText = "Ticket";
-            this.ticketDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.ticketDataGridViewTextBoxColumn.Name = "ticketDataGridViewTextBoxColumn";
+            this.TicketName.DataPropertyName = "TicketName";
+            this.TicketName.HeaderText = "TicketName";
+            this.TicketName.MinimumWidth = 6;
+            this.TicketName.Name = "TicketName";
+            this.TicketName.ReadOnly = true;
+            // 
+            // TicketPrice
+            // 
+            this.TicketPrice.DataPropertyName = "TicketPrice";
+            this.TicketPrice.HeaderText = "TicketPrice";
+            this.TicketPrice.MinimumWidth = 6;
+            this.TicketPrice.Name = "TicketPrice";
+            this.TicketPrice.ReadOnly = true;
+            // 
+            // NoOfPeople
+            // 
+            this.NoOfPeople.DataPropertyName = "NoOfPeople";
+            this.NoOfPeople.HeaderText = "NoOfPeople";
+            this.NoOfPeople.MinimumWidth = 6;
+            this.NoOfPeople.Name = "NoOfPeople";
+            this.NoOfPeople.ReadOnly = true;
             // 
             // entryTimeDataGridViewTextBoxColumn
             // 
@@ -176,9 +191,40 @@ namespace SmartTicketingSystem.UserControls
             this.soldDateDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.soldDateDataGridViewTextBoxColumn.Name = "soldDateDataGridViewTextBoxColumn";
             // 
+            // ticketSaleBindingSource2
+            // 
+            this.ticketSaleBindingSource2.DataSource = typeof(SmartTicketingSystem.Classes.TicketSale);
+            // 
+            // ticketSaleBindingSource1
+            // 
+            this.ticketSaleBindingSource1.DataSource = typeof(SmartTicketingSystem.Classes.TicketSale);
+            // 
+            // txtEntryTime
+            // 
+            this.txtEntryTime.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtEntryTime.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEntryTime.Location = new System.Drawing.Point(278, 352);
+            this.txtEntryTime.Name = "txtEntryTime";
+            this.txtEntryTime.Size = new System.Drawing.Size(434, 36);
+            this.txtEntryTime.TabIndex = 55;
+            this.txtEntryTime.Text = "HH:MM:SS";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.label2.Location = new System.Drawing.Point(274, 326);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(111, 23);
+            this.label2.TabIndex = 54;
+            this.label2.Text = "Entry Time:";
+            // 
             // SellTicketUC
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.Controls.Add(this.txtEntryTime);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.sellDataView);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.comboTicket);
@@ -208,9 +254,13 @@ namespace SmartTicketingSystem.UserControls
         private System.Windows.Forms.BindingSource ticketSaleBindingSource1;
         private System.Windows.Forms.BindingSource ticketSaleBindingSource2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ticketDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TicketName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TicketPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NoOfPeople;
         private System.Windows.Forms.DataGridViewTextBoxColumn entryTimeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn exitTimeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn soldDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TextBox txtEntryTime;
+        private System.Windows.Forms.Label label2;
     }
 }

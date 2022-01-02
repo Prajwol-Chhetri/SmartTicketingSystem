@@ -42,9 +42,9 @@ namespace SmartTicketingSystem.UserControls
             this.txtTicketName = new System.Windows.Forms.TextBox();
             this.ticketDataView = new System.Windows.Forms.DataGridView();
             this.ticketBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ticketRateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Duration = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ticketNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ticketDataView)).BeginInit();
@@ -170,9 +170,9 @@ namespace SmartTicketingSystem.UserControls
             this.ticketDataView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ticketDataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ticketDataView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
+            this.iDDataGridViewTextBoxColumn,
             this.ticketRateDataGridViewTextBoxColumn,
-            this.timingDataGridViewTextBoxColumn,
+            this.Duration,
             this.categoryDataGridViewTextBoxColumn,
             this.ticketNameDataGridViewTextBoxColumn});
             this.ticketDataView.DataSource = this.ticketBindingSource;
@@ -189,38 +189,40 @@ namespace SmartTicketingSystem.UserControls
             // 
             this.ticketBindingSource.DataSource = typeof(SmartTicketingSystem.Classes.Ticket);
             // 
-            // idDataGridViewTextBoxColumn
+            // iDDataGridViewTextBoxColumn
             // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
             // 
             // ticketRateDataGridViewTextBoxColumn
             // 
-            this.ticketRateDataGridViewTextBoxColumn.DataPropertyName = "ticketRate";
-            this.ticketRateDataGridViewTextBoxColumn.HeaderText = "ticketRate";
+            this.ticketRateDataGridViewTextBoxColumn.DataPropertyName = "TicketRate";
+            this.ticketRateDataGridViewTextBoxColumn.HeaderText = "TicketRate";
             this.ticketRateDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.ticketRateDataGridViewTextBoxColumn.Name = "ticketRateDataGridViewTextBoxColumn";
             // 
-            // timingDataGridViewTextBoxColumn
+            // Duration
             // 
-            this.timingDataGridViewTextBoxColumn.DataPropertyName = "timing";
-            this.timingDataGridViewTextBoxColumn.HeaderText = "timing";
-            this.timingDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.timingDataGridViewTextBoxColumn.Name = "timingDataGridViewTextBoxColumn";
+            this.Duration.DataPropertyName = "Duration";
+            this.Duration.HeaderText = "Duration";
+            this.Duration.MinimumWidth = 6;
+            this.Duration.Name = "Duration";
+            this.Duration.ReadOnly = true;
             // 
             // categoryDataGridViewTextBoxColumn
             // 
-            this.categoryDataGridViewTextBoxColumn.DataPropertyName = "category";
-            this.categoryDataGridViewTextBoxColumn.HeaderText = "category";
+            this.categoryDataGridViewTextBoxColumn.DataPropertyName = "Category";
+            this.categoryDataGridViewTextBoxColumn.HeaderText = "Category";
             this.categoryDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
+            this.categoryDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // ticketNameDataGridViewTextBoxColumn
             // 
-            this.ticketNameDataGridViewTextBoxColumn.DataPropertyName = "ticketName";
-            this.ticketNameDataGridViewTextBoxColumn.HeaderText = "ticketName";
+            this.ticketNameDataGridViewTextBoxColumn.DataPropertyName = "TicketName";
+            this.ticketNameDataGridViewTextBoxColumn.HeaderText = "TicketName";
             this.ticketNameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.ticketNameDataGridViewTextBoxColumn.Name = "ticketNameDataGridViewTextBoxColumn";
             // 
@@ -260,11 +262,12 @@ namespace SmartTicketingSystem.UserControls
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtTicketName;
         private System.Windows.Forms.DataGridView ticketDataView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ticketRateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn timingDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource ticketBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ticketRateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Duration;
         private System.Windows.Forms.DataGridViewTextBoxColumn categoryDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ticketNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource ticketBindingSource;
     }
 }

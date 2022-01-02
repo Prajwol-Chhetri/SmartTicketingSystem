@@ -10,7 +10,22 @@ namespace SmartTicketingSystem.Classes
     {
         public Guid ID { get; set; }
 
-        public Guid Ticket { get; set; }
+        public Ticket Ticket { get; set; }
+
+        public string TicketName
+        {
+            get { return Ticket.TicketName; }
+        }
+
+        public string TicketPrice
+        {
+            get { return "Rs. " + Convert.ToString(Ticket.TicketRate); }
+        }
+
+        public int NoOfPeople
+        {
+            get { return Ticket.NoOfPeople; }
+        }
 
         public string EntryTime { get; set; }
 
