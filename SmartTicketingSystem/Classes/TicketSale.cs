@@ -10,6 +10,10 @@ namespace SmartTicketingSystem.Classes
     {
         public Guid ID { get; set; }
 
+        public string CustomerName { get; set; }
+
+        public string CustomerContact { get; set; }
+
         public Ticket Ticket { get; set; }
 
         public string TicketName

@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<ArrayOfTicketSale xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TicketSale>
+    <ID>921ed809-bd95-4faf-9ab6-6f06d973f87d</ID>
+    <CustomerName>Pra</CustomerName>
+    <CustomerContact>1111</CustomerContact>
+    <Ticket>
+      <ID>e0510e20-e6c0-4fbd-b3a9-09f280e7c7d9</ID>
+      <TicketRate>100</TicketRate>
+      <TicketTiming>
+        <ID>f4b38e72-8954-40b0-b8fc-3f64042449c2</ID>
+        <NoOfHours>1</NoOfHours>
+        <TimingName>one hour</TimingName>
+      </TicketTiming>
+      <TicketCategory>
+        <ID>3e839b16-b13a-4fc2-b2c9-2bfee5e8adb8</ID>
+        <NoOfPeople>1</NoOfPeople>
+        <CategoryName>child</CategoryName>
+      </TicketCategory>
+      <TicketName>child-1</TicketName>
+    </Ticket>
+    <EntryTime>2:22:22 PM</EntryTime>
+    <ExitTime>3:22:22 PM</ExitTime>
+    <SoldDate>2022-01-02T00:00:00+05:45</SoldDate>
+  </TicketSale>
+  <TicketSale>
+    <ID>47c91502-b4a9-4f14-a1a5-e2aacb7a6144</ID>
+    <CustomerName>Pra</CustomerName>
+    <CustomerContact>46546</CustomerContact>
+    <Ticket>
+      <ID>e0510e20-e6c0-4fbd-b3a9-09f280e7c7d9</ID>
+      <TicketRate>100</TicketRate>
+      <TicketTiming>
+        <ID>f4b38e72-8954-40b0-b8fc-3f64042449c2</ID>
+        <NoOfHours>1</NoOfHours>
+        <TimingName>one hour</TimingName>
+      </TicketTiming>
+      <TicketCategory>
+        <ID>3e839b16-b13a-4fc2-b2c9-2bfee5e8adb8</ID>
+        <NoOfPeople>1</NoOfPeople>
+        <CategoryName>child</CategoryName>
+      </TicketCategory>
+      <TicketName>child-1</TicketName>
+    </Ticket>
+    <EntryTime>12:55:55 PM</EntryTime>
+    <ExitTime>1:55:55 PM</ExitTime>
+    <SoldDate>2022-01-02T00:00:00+05:45</SoldDate>
+  </TicketSale>
+</ArrayOfTicketSale>

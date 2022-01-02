@@ -262,7 +262,6 @@ namespace SmartTicketingSystem.UserControls
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtTicketName;
         private System.Windows.Forms.DataGridView ticketDataView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn timingDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource ticketBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ticketRateDataGridViewTextBoxColumn;

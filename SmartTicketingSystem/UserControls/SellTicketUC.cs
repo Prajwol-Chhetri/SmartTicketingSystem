@@ -103,32 +103,41 @@ namespace SmartTicketingSystem.UserControls
             var selectedTicketCategory = categories.SingleOrDefault(y => y.ID == selectedTicket.TicketCategory.ID);
 
 
-            // assigning check in and check out time
-            DateTime currentTime = DateTime.Now;
-            DateTime checkInTime = DateTime.ParseExact(txtEntryTime.Text, "HH:mm:ss", CultureInfo.InvariantCulture);
-            DateTime checkOutTime = checkInTime.AddHours(selectedTicketTiming.NoOfHours);
-
-            // start and end time of recreation center
-            TimeSpan start = new TimeSpan(10, 0, 0);
-            TimeSpan end = new TimeSpan(18, 0, 0);
-
-            if (checkInTime.TimeOfDay >= start && checkOutTime.TimeOfDay <= end)
+            try
             {
-                // creating new ticketSale object of Ticket Sale class
-                TicketSale ticketSale = new TicketSale();
-                ticketSale.ID = Guid.NewGuid();
-                ticketSale.Ticket = selectedTicket;
-                ticketSale.EntryTime = checkInTime.ToString("h:mm:ss tt");
-                ticketSale.ExitTime = checkOutTime.ToString("h:mm:ss tt");
-                ticketSale.SoldDate = DateTime.Today;
+                // assigning check in and check out time
+                DateTime currentTime = DateTime.Now;
+                DateTime checkInTime = DateTime.ParseExact(txtEntryTime.Text, "HH:mm:ss", CultureInfo.InvariantCulture);
+                DateTime checkOutTime = checkInTime.AddHours(selectedTicketTiming.NoOfHours);
 
-                // adding ticket Sale obj to list of ticket sale object
-                ticketSales.Add(ticketSale);
-                MessageBox.Show("SOLD TICKET SUCCESSFULLY");
+                // start and end time of recreation center
+                TimeSpan start = new TimeSpan(10, 0, 0);
+                TimeSpan end = new TimeSpan(18, 0, 0);
+
+                if (checkInTime.TimeOfDay >= start && checkOutTime.TimeOfDay <= end)
+                {
+                    // creating new ticketSale object of Ticket Sale class
+                    TicketSale ticketSale = new TicketSale();
+                    ticketSale.ID = Guid.NewGuid();
+                    ticketSale.CustomerName = txtCustomerName.Text;
+                    ticketSale.CustomerContact = txtCustomerPhone.Text;
+                    ticketSale.Ticket = selectedTicket;
+                    ticketSale.EntryTime = checkInTime.ToString("h:mm:ss tt");
+                    ticketSale.ExitTime = checkOutTime.ToString("h:mm:ss tt");
+                    ticketSale.SoldDate = DateTime.Today;
+
+                    // adding ticket Sale obj to list of ticket sale object
+                    ticketSales.Add(ticketSale);
+                    MessageBox.Show("SOLD TICKET SUCCESSFULLY");
+                }
+                else
+                {
+                    MessageBox.Show("PLEASE SELECT A VALID TICKET THAT SATISFIES THE ENTRY AND EXIT TIME");
+                }
             }
-            else
+            catch (Exception)
             {
-                MessageBox.Show("PLEASE SELECT A VALID TICKET THAT SATISFIES THE ENTRY AND EXIT TIME");
+                MessageBox.Show("PLEASE ENTER VALID TIME");
             }
 
             // serializing Ticket Sales object to XMl file and closing it

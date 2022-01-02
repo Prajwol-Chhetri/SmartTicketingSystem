@@ -175,8 +175,6 @@ namespace SmartTicketingSystem.UserControls
         private System.Windows.Forms.ComboBox comboTicketName;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnDeleteTicket;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn timingDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource ticketBindingSource;
         private System.Windows.Forms.DataGridView ticketDataView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
